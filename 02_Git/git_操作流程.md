@@ -1,4 +1,5 @@
 # Git 操作流程
+
 ## 创建版本库
  1. mkdir learngit
  2. cd learingit
@@ -15,6 +16,7 @@
     > git add file1.txt<br>
     > git add file2.txt file3.txt<br>
     > git commit  -m "add 3 files"
+
 ## 修改并提交
   1. 我们已经成功添加并提交了一个readme.txt文件，现在对它进行修改<br>
     > Git is a distributed version control system.<br>
@@ -34,6 +36,7 @@
   8. 再次试试 `git status`
      > On branch master <br>
      > nothing to commit, working tree clean
+     
 ## 版本回退
   1. 我们学会了修改并提交，现在再练习一次，修改后的readme.txt<br>
      > Git is a distributed version control system.<br>
