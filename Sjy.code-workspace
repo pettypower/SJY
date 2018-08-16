@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "D:\\02_Git\\jstraining"
 		}
 	],
 	"settings": {}
