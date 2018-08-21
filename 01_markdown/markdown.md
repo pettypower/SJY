@@ -17,7 +17,9 @@
 # Emphasis 文本强调： 
 
 *斜体* or _强调_<br>
+
 **加粗** or __加粗__<br>
+
 ***粗斜体*** or ___粗斜体___
 
 
@@ -46,8 +48,6 @@ Ordered 有序列表：
 1. fadsf
 1. 第一行
 
-afsdfasdf
-1. fasdf
 
 - 第二行
 - 第三行
@@ -73,6 +73,7 @@ Inline-style 内嵌方式：
 [link text](https://www.google.com "title text")
 
 [百度](https://www.baidu.com "baidu")
+
  
 Reference-style 引用方式：
 [link text][id]
