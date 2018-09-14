@@ -1,0 +1,67 @@
+Manifest-Version: 1.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Built-By: genie.packaging
+Bundle-SymbolicName: org.eclipse.epp.package.jee;singleton:=true
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/epp/or
+ g.eclipse.epp.packages.git;path="packages/org.eclipse.epp.package.jee
+ ";commitId=06d8ee7325f2842cb2e387f434635cdf99d7b1d1
+Require-Bundle: org.eclipse.platform,org.eclipse.equinox.app
+Bundle-Version: 4.4.2.20150219-0708
+Build-Jdk: 1.7.0_51
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Name: %Bundle-Name
+Eclipse-BundleShape: dir
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Bundle-ManifestVersion: 2
+
+Name: wtp_logo_96.png
+SHA1-Digest: awynBvkinTPfhAxlweyIpN+jsoA=
+
+Name: wtp_logo_2010.png
+SHA1-Digest: OmE1NB3tM8AFmg/FTexDGR8yuYc=
+
+Name: about.ini
+SHA1-Digest: k0TYYvl6anDnuM4OWBbTf6Yv/Ic=
+
+Name: aboutgears_115x.png
+SHA1-Digest: JcNlM+KYhz40EgfQMf9cxYCa2Bc=
+
+Name: about.mappings
+SHA1-Digest: j5odRaff6A8vs683m4Yf+woFNRs=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA1-Digest: ddyzU6+AvkRcHWcrtObAA3qYsDs=
+
+Name: about.html
+SHA1-Digest: /CETf4WmV+BiPhUbrICU0RE3BVM=
+
+Name: META-INF/maven/org.eclipse.epp/org.eclipse.epp.package.jee/pom.p
+ roperties
+SHA1-Digest: 0YRyhlOloX2kizy6gjgrjE/LatA=
+
+Name: javaee-ide_x32.png
+SHA1-Digest: ZsNYppbm73rfedTfRqy1eICFAO0=
+
+Name: about.properties
+SHA1-Digest: nNBYBSy4fSPcEJb8z+sX5KH85Qs=
+
+Name: helpData.xml
+SHA1-Digest: ZR1pFHw9xoMSs25sZ0MO6v4/asI=
+
+Name: javaee-ide_x48.png
+SHA1-Digest: hzDSbaYzJJUO7G1T/KWTkBiVpUc=
+
+Name: javaee-ide_x16.png
+SHA1-Digest: 7FT+pGAk4NdYb53EtfaihE+FLzI=
+
+Name: META-INF/maven/org.eclipse.epp/org.eclipse.epp.package.jee/pom.x
+ ml
+SHA1-Digest: 4KlfLbItYCfxJH3c+wYNt9Rg6EU=
+
+Name: plugin.xml
+SHA1-Digest: K8Sm2/9WH+1Acp0KqCCrN5oFUuE=
+
+Name: plugin_customization.ini
+SHA1-Digest: pvKtJmHZXvgwWNwAXq00Y0gIvPo=
+

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='org.sonatype.m2e.mavenarchiver.repository' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1474836758676'/>
+    <property name='publishPackFilesAsSiblings' value='true'/>
+  </properties>
+  <mappings size='5'>
+    <rule filter='(&amp; (classifier=osgi.bundle) (format=packed))' output='${repoUrl}/plugins/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature) (format=packed))' output='${repoUrl}/features/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='2'>
+    <artifact classifier='org.eclipse.update.feature' id='org.sonatype.m2e.mavenarchiver.feature' version='0.17.2.201609252051'>
+      <properties size='6'>
+        <property name='artifact.size' value='10544'/>
+        <property name='download.size' value='10544'/>
+        <property name='maven-groupId' value='org.sonatype.m2e.extras'/>
+        <property name='maven-artifactId' value='org.sonatype.m2e.mavenarchiver.feature'/>
+        <property name='maven-version' value='0.17.2-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.sonatype.m2e.mavenarchiver' version='0.17.2.201609252051'>
+      <properties size='5'>
+        <property name='artifact.size' value='19414'/>
+        <property name='download.size' value='19414'/>
+        <property name='maven-groupId' value='org.sonatype.m2e.extras'/>
+        <property name='maven-artifactId' value='org.sonatype.m2e.mavenarchiver'/>
+        <property name='maven-version' value='0.17.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

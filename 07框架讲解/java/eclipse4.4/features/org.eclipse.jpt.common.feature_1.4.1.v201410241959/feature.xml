@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.jpt.common.feature"
+      label="%featureName"
+      version="1.4.1.v201410241959"
+      provider-name="%providerName"
+      plugin="org.eclipse.jpt.common.branding">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="license.html">
+      %license
+   </license>
+
+   <plugin
+         id="org.eclipse.jpt.common.utility"
+         download-size="1140"
+         install-size="2713"
+         version="2.3.0.v201311152020"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jpt.common.core"
+         download-size="512"
+         install-size="1214"
+         version="1.4.0.v201308261915"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jpt.common.ui"
+         download-size="429"
+         install-size="990"
+         version="1.4.0.v201310111551"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jpt.common.branding"
+         download-size="16"
+         install-size="20"
+         version="1.4.0.v201309202144"
+         unpack="false"/>
+
+</feature>

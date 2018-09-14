@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.datatools.enablement.feature"
+      label="%featureName"
+      version="1.12.0.v201406061321-7J9t0B_0haN-EchrvGIyEh2M8j8a"
+      provider-name="%providerName"
+      plugin="org.eclipse.datatools.enablement.finfo"
+      image="eclipse_update_120.jpg">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %featureCopyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://download.eclipse.org/datatools/updates/1.12"/>
+      <discovery label="%updateSiteName" url="http://download.eclipse.org/datatools/updates/1.12"/>
+   </url>
+
+   <includes
+         id="org.eclipse.datatools.enablement.apache.derby.feature"
+         version="1.12.0.v201406061321-777B8gBmKFQ3NjRaMjbx8GDI"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.hsqldb.feature"
+         version="1.12.0.v201406061321-67G0AqGDM7KfNWJjJS8GDI"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.ibm.feature"
+         version="1.12.0.v201406061321-7G-7cFD3wThz-VTq2cpq3"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.jdbc.feature"
+         version="1.12.0.v201406061321-4-49oB58B7DAF7FCH"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.jdt.feature"
+         version="1.12.0.v201406061321-2-07w312218332612"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.msft.feature"
+         version="1.12.0.v201406061321-5478AkF7AO7UBQAK8M"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.mysql.feature"
+         version="1.12.0.v201406061321-5478AkF7AK8X9JCREG"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.oda.feature"
+         version="1.12.0.v201406061321-7D7U7OEVVFNSGfJoIz0Of"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.oda.designer.feature"
+         version="1.12.0.v201406061321-647L9oB58H5E8E8TBK"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.oracle.feature"
+         version="1.12.0.v201406061321-548fAkF7AL7RBJANAI"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.postgresql.feature"
+         version="1.12.0.v201406061321-553AkF7AK8PCRBQBP"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.sap.feature"
+         version="1.12.0.v201406061321-540AkF7AJ7YEJBU7S"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.sybase.feature"
+         version="1.12.0.v201406061321-7E478F9NiNc2S7fxRCTD"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.ingres.feature"
+         version="1.12.0.v201406061321-540AkF78Z7UCRAQDB"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.enablement.sqlite.feature"
+         version="1.12.0.v201406061321-542AkF7AJ7SAKAPBF"
+         optional="true"/>
+
+   <requires>
+      <import feature="org.eclipse.datatools.modelbase.feature" version="1.12.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.datatools.connectivity.feature" version="1.12.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.finfo"
+         download-size="0"
+         install-size="0"
+         version="1.5.1.v200906161800"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.sqltools.db.derby.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.v200906020900"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.sqltools.db.generic.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.v200906020900"
+         unpack="false"/>
+
+</feature>

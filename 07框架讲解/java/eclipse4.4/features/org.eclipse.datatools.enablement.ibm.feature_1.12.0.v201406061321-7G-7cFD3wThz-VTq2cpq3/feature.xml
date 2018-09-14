@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.datatools.enablement.ibm.feature"
+      label="%featureName"
+      version="1.12.0.v201406061321-7G-7cFD3wThz-VTq2cpq3"
+      provider-name="%providerName"
+      plugin="org.eclipse.datatools.enablement.ibm"
+      image="eclipse_update_120.jpg">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %featureCopyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://download.eclipse.org/datatools/updates/1.12"/>
+      <discovery label="%updateSiteName" url="http://download.eclipse.org/datatools/updates/1.12"/>
+   </url>
+
+   <requires>
+      <import feature="org.eclipse.datatools.modelbase.feature" version="1.12.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.datatools.connectivity.feature" version="1.12.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.datatools.enablement.jdbc.feature" version="1.12.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.v201401170830"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.db2"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.v201401170830"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.db2.iseries.dbdefinition"
+         download-size="0"
+         install-size="0"
+         version="1.0.3.v201107221502"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.db2.iseries"
+         download-size="0"
+         install-size="0"
+         version="1.0.2.v201107221502"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.db2.iseries.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.3.v201212120614"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.db2.luw.dbdefinition"
+         download-size="0"
+         install-size="0"
+         version="1.0.7.v201405302027"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.db2.luw"
+         download-size="0"
+         install-size="0"
+         version="1.0.3.v201401170830"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.db2.luw.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.6.v201402010752"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.db2.zseries.dbdefinition"
+         download-size="0"
+         install-size="0"
+         version="1.0.4.v201107221502"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.db2.zseries"
+         download-size="0"
+         install-size="0"
+         version="1.0.2.v201107221502"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.db2.zseries.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.2.v201202100836"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.informix.dbdefinition"
+         download-size="0"
+         install-size="0"
+         version="1.0.4.v201107221502"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.informix"
+         download-size="0"
+         install-size="0"
+         version="1.0.1.v201107221502"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.informix.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.3.v201202100836"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.enablement.ibm.ui"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.v201107221502"
+         unpack="false"/>
+
+</feature>

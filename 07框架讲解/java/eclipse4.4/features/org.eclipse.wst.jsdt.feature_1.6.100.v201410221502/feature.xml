@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.wst.jsdt.feature"
+      label="%featureName"
+      version="1.6.100.v201410221502"
+      provider-name="%providerName"
+      plugin="org.eclipse.wst.jsdt.ui">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.core"
+         download-size="3627"
+         install-size="8707"
+         version="1.3.300.v201410221502"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.manipulation"
+         download-size="53"
+         install-size="91"
+         version="1.0.500.v201402051800"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.ui"
+         download-size="8176"
+         install-size="18850"
+         version="1.1.500.v201409121658"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.support.firefox"
+         download-size="32"
+         install-size="215"
+         version="1.0.500.v201402051800"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.support.ie"
+         download-size="519"
+         install-size="3493"
+         version="1.0.500.v201402051800"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.doc"
+         download-size="451"
+         install-size="619"
+         version="1.4.100.v201309042002"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.debug.core"
+         download-size="155"
+         install-size="306"
+         version="3.1.100.v201405212207"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.debug.transport"
+         download-size="27"
+         install-size="42"
+         version="1.0.200.v201402051800"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.debug.crossfire"
+         download-size="124"
+         install-size="250"
+         version="1.0.400.v201402051800"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.debug.rhino"
+         download-size="77"
+         install-size="155"
+         version="1.0.300.v201402051800"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.debug.rhino.debugger"
+         download-size="74"
+         install-size="146"
+         version="1.0.400.v201402051800"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.debug.ui"
+         download-size="234"
+         install-size="511"
+         version="1.0.400.v201402051800"
+         unpack="false"/>
+
+   <plugin
+         id="org.mozilla.javascript"
+         download-size="878"
+         install-size="1845"
+         version="1.7.2.v201005080400"
+         unpack="false"/>
+
+</feature>
