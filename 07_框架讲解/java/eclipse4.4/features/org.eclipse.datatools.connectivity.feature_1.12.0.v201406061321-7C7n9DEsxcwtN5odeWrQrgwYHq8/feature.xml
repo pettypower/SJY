@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.datatools.connectivity.feature"
+      label="%featureName"
+      version="1.12.0.v201406061321-7C7n9DEsxcwtN5odeWrQrgwYHq8"
+      provider-name="%providerName"
+      plugin="org.eclipse.datatools.connectivity"
+      image="eclipse_update_120.jpg">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %featureCopyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://download.eclipse.org/datatools/updates/1.12"/>
+      <discovery label="%updateSiteName" url="http://download.eclipse.org/datatools/updates/1.12"/>
+   </url>
+
+   <includes
+         id="org.eclipse.datatools.connectivity.oda.feature"
+         version="1.12.0.v201406061321-7E7C7YBgJ9ET9OHLDfLZ"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.connectivity.oda.designer.feature"
+         version="1.12.0.v201406061321-4147w312514242925"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.datatools.connectivity.oda.designer.core.feature"
+         version="1.12.0.v201406061321-787B7PBgJ9DUBNCVAaSZ"
+         optional="true"/>
+
+   <requires>
+      <import feature="org.eclipse.datatools.modelbase.feature" version="1.12.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.datatools.connectivity.sqm.core.ui"
+         download-size="0"
+         install-size="0"
+         version="1.2.3.v201212070447"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.connectivity.sqm.core"
+         download-size="0"
+         install-size="0"
+         version="1.2.8.v201401230755"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.connectivity.sqm.server.ui"
+         download-size="0"
+         install-size="0"
+         version="1.1.101.v201212070447"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.connectivity.ui.dse"
+         download-size="0"
+         install-size="0"
+         version="1.1.5.v201212070447"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.connectivity.ui"
+         download-size="0"
+         install-size="0"
+         version="1.2.4.v201212070447"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.connectivity"
+         download-size="0"
+         install-size="0"
+         version="1.2.11.v201401230755"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.help"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v200906020553"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.connectivity.console.profile"
+         download-size="0"
+         install-size="0"
+         version="1.0.10.v201109250955"
+         unpack="false"/>
+
+</feature>

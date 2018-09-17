@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.jst.web_ui.feature"
+      label="%featureName"
+      version="3.6.3.v201502041526"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <includes
+         id="org.eclipse.wst.ws_ui.feature"
+         version="3.6.3.v201501292352"/>
+
+   <includes
+         id="org.eclipse.jst.web_userdoc.feature"
+         version="3.6.0.v201405070205"/>
+
+   <includes
+         id="org.eclipse.jst.web_core.feature"
+         version="3.6.3.v201502041526"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.web.support.jsp"
+         download-size="13"
+         install-size="21"
+         version="1.0.600.v201307151913"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jst.common.annotations.ui"
+         download-size="35"
+         install-size="68"
+         version="1.1.300.v201302011850"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jst.common.ui"
+         download-size="77"
+         install-size="153"
+         version="1.0.201.v201208291950"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jst.jsp.ui"
+         download-size="515"
+         install-size="1124"
+         version="1.1.901.v201501261620"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jst.jsp.ui.infopop"
+         download-size="12"
+         install-size="24"
+         version="1.0.200.v201309112106"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.jsdt.debug.rhino.ui"
+         download-size="92"
+         install-size="183"
+         version="1.0.300.v201405071359"
+         unpack="false"/>
+
+</feature>

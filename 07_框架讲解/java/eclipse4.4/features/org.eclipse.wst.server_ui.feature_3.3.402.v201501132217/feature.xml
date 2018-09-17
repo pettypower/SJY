@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.wst.server_ui.feature"
+      label="%featureName"
+      version="3.3.402.v201501132217"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <includes
+         id="org.eclipse.wst.server_userdoc.feature"
+         version="3.3.300.v201405011426"/>
+
+   <includes
+         id="org.eclipse.wst.server_core.feature"
+         version="3.3.402.v201409292121"/>
+
+   <plugin
+         id="org.eclipse.wst.internet.monitor.ui"
+         download-size="131"
+         install-size="243"
+         version="1.0.700.v201309182039"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.server.ui.infopop"
+         download-size="15"
+         install-size="35"
+         version="1.1.200.v201309182117"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.server.ui"
+         download-size="845"
+         install-size="1683"
+         version="1.5.100.v201407281532"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.server.discovery"
+         download-size="77"
+         install-size="148"
+         version="1.0.501.v201501132217"
+         unpack="false"/>
+
+</feature>

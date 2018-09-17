@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.m2e.feature"
+      label="%featureName"
+      version="1.5.1.20150109-1820"
+      provider-name="%providerName"
+      plugin="org.eclipse.m2e.core">
+   <install-handler/>
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.emf.ecore.edit"/>
+      <import plugin="org.eclipse.wst.common.emf"/>
+      <import plugin="org.eclipse.wst.sse.core"/>
+      <import plugin="org.eclipse.wst.xml.core"/>
+      <import plugin="org.eclipse.jem.util"/>
+      <import feature="org.eclipse.platform" version="3.6.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.rcp" version="3.6.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.jdt" version="3.6.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.m2e.archetype.common"
+         download-size="1844"
+         install-size="2076"
+         version="1.5.1.20150109-1819"/>
+
+   <plugin
+         id="org.eclipse.m2e.maven.indexer"
+         download-size="1103"
+         install-size="1306"
+         version="1.5.1.20150109-1819"/>
+
+   <plugin
+         id="org.eclipse.m2e.model.edit"
+         download-size="385"
+         install-size="1338"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.core"
+         download-size="554"
+         install-size="1319"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.launching"
+         download-size="111"
+         install-size="222"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.jdt"
+         download-size="112"
+         install-size="255"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.editor"
+         download-size="292"
+         install-size="583"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.editor.xml"
+         download-size="230"
+         install-size="500"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.maven.runtime"
+         download-size="5480"
+         install-size="6167"
+         version="1.5.1.20150109-1819"/>
+
+   <plugin
+         id="org.eclipse.m2e.maven.runtime.slf4j.simple"
+         download-size="18"
+         install-size="25"
+         version="1.5.1.20150109-1819"/>
+
+   <plugin
+         id="org.eclipse.m2e.refactoring"
+         download-size="74"
+         install-size="155"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.lifecyclemapping.defaults"
+         download-size="9"
+         install-size="17"
+         version="1.5.1.20150109-1820"/>
+
+   <plugin
+         id="org.eclipse.m2e.discovery"
+         download-size="75"
+         install-size="164"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.core.ui"
+         download-size="750"
+         install-size="1586"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.scm"
+         download-size="67"
+         install-size="139"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.jdt.ui"
+         download-size="28"
+         install-size="60"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.profiles.core"
+         download-size="22"
+         install-size="43"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.m2e.profiles.ui"
+         download-size="43"
+         install-size="93"
+         version="1.5.1.20150109-1820"
+         unpack="false"/>
+
+</feature>

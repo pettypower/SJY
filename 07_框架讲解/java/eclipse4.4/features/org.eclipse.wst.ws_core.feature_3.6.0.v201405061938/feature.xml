@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.wst.ws_core.feature"
+      label="%featureName"
+      version="3.6.0.v201405061938"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <includes
+         id="org.eclipse.wst.ws_wsdl15.feature"
+         version="1.5.400.v201405061938"/>
+
+   <plugin
+         id="org.eclipse.wst.command.env"
+         download-size="73"
+         install-size="142"
+         version="1.0.450.v201401132311"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.command.env.core"
+         download-size="58"
+         install-size="102"
+         version="1.0.250.v201309242123"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.codec"
+         download-size="251"
+         install-size="504"
+         version="1.6.0.v201305230611"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.ws"
+         download-size="232"
+         install-size="482"
+         version="1.1.350.v201309242123"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.ws.parser"
+         download-size="51"
+         install-size="91"
+         version="1.0.550.v201309242123"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.wsdl"
+         download-size="424"
+         install-size="1649"
+         version="1.2.350.v201309242123"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.wsdl.validation"
+         download-size="183"
+         install-size="371"
+         version="1.1.650.v201309242123"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.wsi"
+         download-size="824"
+         install-size="1799"
+         version="1.0.550.v201309242123"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.logging"
+         download-size="44"
+         install-size="93"
+         version="1.0.4.v201101211617"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.log4j"
+         download-size="404"
+         install-size="774"
+         version="1.2.15.v201012070815"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.wsil4j"
+         download-size="75"
+         install-size="135"
+         version="1.0.0.v200901211807"
+         unpack="false"/>
+
+   <plugin
+         id="org.uddi4j"
+         download-size="191"
+         install-size="395"
+         version="2.0.5.v200805270300"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.discovery"
+         download-size="66"
+         install-size="82"
+         version="0.2.0.v201004190315"/>
+
+   <plugin
+         id="javax.xml.rpc"
+         download-size="35"
+         install-size="55"
+         version="1.1.0.v201209140446"/>
+
+   <plugin
+         id="javax.xml.soap"
+         download-size="26"
+         install-size="40"
+         version="1.2.0.v201005080501"/>
+
+   <plugin
+         id="org.apache.axis"
+         download-size="1506"
+         install-size="1622"
+         version="1.4.0.v201005080400"/>
+
+   <plugin
+         id="javax.mail"
+         download-size="313"
+         install-size="588"
+         version="1.4.0.v201005080615"
+         unpack="false"/>
+
+   <plugin
+         id="javax.activation"
+         download-size="54"
+         install-size="105"
+         version="1.1.0.v201211130549"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.wst.ws.service.policy"
+         download-size="56"
+         install-size="124"
+         version="1.0.400.v201309242123"
+         unpack="false"/>
+
+</feature>

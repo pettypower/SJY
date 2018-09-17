@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.jst.webpageeditor.feature"
+      label="%featureName"
+      version="2.6.2.v201409302019"
+      provider-name="%providerName"
+      image="eclipse_update_120.jpg">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="license.html">
+      %license
+   </license>
+
+   <plugin
+         id="org.eclipse.jst.pagedesigner"
+         download-size="1577"
+         install-size="3261"
+         version="1.6.200.v201409302017"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jst.pagedesigner.jsf.ui"
+         download-size="293"
+         install-size="604"
+         version="1.5.0.v201309172102"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jst.pagedesigner.jsp.core"
+         download-size="31"
+         install-size="56"
+         version="1.5.0.v201309172102"
+         unpack="false"/>
+
+</feature>
