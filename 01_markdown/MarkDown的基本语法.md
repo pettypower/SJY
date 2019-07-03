@@ -116,6 +116,11 @@
 
 ## 5.代码和语法高亮
 
+\`\`\`html
+此处填写需要语法高亮的代码
+\`\`\`
+
+
 ```html
     <!-- html -->
     <div>Syntax Highlighting</div>
@@ -144,7 +149,6 @@
 
 ## 6. Block Code 代码区块
 
-在该行开头缩进4个空格或一个制表符(tab)
  
 ```
 > Email-style angle brackets  
