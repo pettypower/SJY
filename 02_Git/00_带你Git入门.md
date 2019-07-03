@@ -78,7 +78,8 @@
     > * `git commit -a -m "some comment2"`此操作会将工作区，暂存区的改动一并提交
 
 4. 推送到远程仓库
-    > `git push -u origin master` 推送到远程仓库`origin`（初始化时曾设置好的地址）的`master`分支
+    > `git push -u origin master` 推送到远程仓库`origin`  
+    > 注：初始化时曾设置好的远程地址略称`origin`的`master`分支
 
 ### 6.附：Linux 最基本命令
 
