@@ -115,5 +115,3 @@ Git鼓励大量使用分支
    1. `fetch`      Download objects and refs from another repository
    2. `pull`       Fetch from and integrate with another repository or a local branch
    3. `push`       Update remote refs along with associated objects
-
-zouqiang is a sexy man
