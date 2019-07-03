@@ -12,3 +12,5 @@ doc/*.txt
 doc/**/*.pdf
 # ignore all .exe files 
 *.exe
+
+/.vscode
