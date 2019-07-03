@@ -79,7 +79,7 @@ Git鼓励大量使用分支
 ### 6. 标签管理
 
 ### 原汁原味的解释
-zouqiang
+
 > start a working area (see also: git help tutorial)
 
    1. `clone`      Clone a repository into a new directory
