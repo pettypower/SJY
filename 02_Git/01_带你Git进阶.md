@@ -71,6 +71,7 @@
     > - `git merge dev` 合并指定分支到当前分支
 4. 删除分支
     > - `git branck -d dev` 删除指定分支
+
 Git鼓励大量使用分支
 
 ### 5. 冲突实验
@@ -78,7 +79,7 @@ Git鼓励大量使用分支
 ### 6. 标签管理
 
 ### 原汁原味的解释
-
+zouqiang
 > start a working area (see also: git help tutorial)
 
    1. `clone`      Clone a repository into a new directory
