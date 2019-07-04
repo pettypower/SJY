@@ -58,6 +58,7 @@
     > - `git branck -d dev` 删除指定分支
 4. 合并(merge)
     > - `git merge dev` 将 **dev** 分支merge到当前分支
+    > - `git merge --no-ff dev` 禁用fast-forward模式
 5. 变基(rebase)
     > - `git rebase dev` 将 **dev** 分支rebase到当前分支
     > - `git rebase -i f52c633` 编辑当前分支的从 **f52c633** 开始历史记录（修改commitlog或合并历史等）
