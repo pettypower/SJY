@@ -1,47 +1,34 @@
 # 带你Git进阶
 
-> 撰稿人：邹强
-> 基本简介：Git的进阶课程
-> 作成时间：2018-8-21
-> 修改时间：2019-7-3
+> 撰稿人：邹强  
+> 基本简介：Git的进阶课程  
+> 作成时间：2018-8-21  
+> 修改时间：2019-7-4
 
 ## 课程目录
 
 1. 撤回命令
-2. 删除与移动命令
-3. 日志与对比命令
-4. 分支管理
-5. 冲突实验
-6. 标签管理
+2. 日志与对比命令
+3. 分支管理
+4. 删除与移动命令
+5. 标签管理
 
 ### 1. 撤回命令
 
 1. 放弃工作区修改
-    > `git checkout nFile.txt`
-    > 两种可能性
-    >  1. 暂存区有此文件，工作区恢复成暂存区版本
-    >  2. 暂存区无此文件，工作区恢复成仓库版本
+    > `git checkout nFile.txt`  
+    >  1. 暂存区有此文件时，工作区恢复成暂存区版本
+    >  2. 暂存区无此文件时，工作区恢复成仓库版本
 
 2. 放弃暂存区的内容
-    > - `git reset HEAD nFile.txt` 工作区保持原状
+    > - `git reset HEAD nFile.txt` （工作区保持原状）
 
 3. 撤回仓库区内容：（实际调整的是仓库区的HEAD）
     > - `git reset --hard HEAD^` 将仓库退回到上一个版本（HEAD^^则表示退回到上两个版本，并同步到本地工作区，HEAD~5表示退回到上5个版本）
     > - `git reflog` 命令历史
     > - `git reset --hard 版本号` 将仓库的HEAD指向某版本（可前进，可后退）
 
-### 2. 删除与移动命令
-
-1. 删除文件
-    > - `git rm nFile.txt` 删除`nFile.txt`并提交到暂存区
-    > - `git rm --cached nFile.txt` 删除暂存区但保留工作区的`nFile.txt`文件
-    > - `git rm log/\*.log` 删除log目录下所有后缀为log的文件
-    > - `git rm \*~` 删除所有以~结尾的文件
-
-2. 移动文件（可以用来重命名）
-    > - `git mv nFile.txt nFile2.txt` 将`nFile.txt` 重命名为`nFile2.txt`文件
-
-### 3.日志与对比命令
+### 2.日志与对比命令
 
 1. 查看日志
     > - `git log` 显示所有提交记录（后面追加-3 参数表示显示最新3条记录）
@@ -59,7 +46,7 @@
 3. 改写提交
     > - `git commit --amend`
 
-### 4. 分支管理
+### 3. 分支管理
 
 1. 创建&切换分支
     > - `git branch dev` 创建dev分支
@@ -67,16 +54,49 @@
     > - `git checkout -b dev` 创建并切换到dev分支
 2. 查看分支
     > - `git branch` 查看所有分支，当前分支会标*号
-3. 合并分支
-    > - `git merge dev` 合并指定分支到当前分支
-4. 删除分支
+3. 删除分支
     > - `git branck -d dev` 删除指定分支
+4. 合并(merge)
+    > - `git merge dev` 将 **dev** 分支merge到当前分支
+5. 变基(rebase)
+    > - `git rebase dev` 将 **dev** 分支rebase到当前分支
+    > - `git rebase -i f52c633` 编辑当前分支的从 **f52c633** 开始历史记录（修改commitlog或合并历史等）
 
 Git鼓励大量使用分支
 
-### 5. 冲突实验
+### 4. 删除与移动命令
 
-### 6. 标签管理
+1. 删除文件
+    > - `git rm nFile.txt` 删除`nFile.txt`并提交到暂存区
+    > - `git rm --cached nFile.txt` 删除暂存区但保留工作区的`nFile.txt`文件
+    > - `git rm log/\*.log` 删除log目录下所有后缀为log的文件
+    > - `git rm \*~` 删除所有以~结尾的文件
+
+2. 移动文件（可以用来重命名）
+    > - `git mv nFile.txt nFile2.txt` 将`nFile.txt` 重命名为`nFile2.txt`文件
+
+### 5. 标签管理
+
+1. 为分支打个标签
+    > - `git tag v1.0`  
+    >   为当前分支的最新commit上打 **tag v1.0** 标签
+    > - `git tag v0.9 f52c633`  
+    >   为当前分支的[f52c633]commit上打 **tag v0.9** 标签
+    > - `git tag -a v0.1 -m "version 0.1 released" 1094adb`  
+    >   为当前分支的[1094adb]commit上打 **v0.1** 标签并备注 **version 0.1 released**
+2. 查看标签
+    > - `git tag`  查看所有标签列表
+    > - `git show v0.9` 查看 **v0.9** 标签的明细（包括备注）
+3. 删除本地标签（默认标签均为本地）
+    > - `git tag -d v0.1` 删除 **v0.1** 标签
+4. 推送标签到远程
+    > - `git push origin v0.1` 推送 **v0.1** 标签到远程
+    > - `git push origin --tags` 推送全部尚未推送标签
+5. 删除远程标签
+    > - `git tag -d v0.1` 先删除本地 **v0.1** 标签
+    > - `git push origin :refs/tags/v0.1` 删除远程 **v0.1** 标签
+
+注：标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。
 
 ### 原汁原味的解释
 
@@ -117,4 +137,4 @@ Git鼓励大量使用分支
    3. `push`       Update remote refs along with associated objects  
 
 更多命令参考
-[Git常用命令详解](https://www.jianshu.com/p/360bdda5157f "Git")afdfadfadsfad
+[Git常用命令详解](https://www.jianshu.com/p/360bdda5157f "Git")

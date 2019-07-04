@@ -75,7 +75,7 @@
 
 3. 提交到仓库区
     > * `git commit -m "some comment"` 此操作会将暂存区的改动提交
-    > * `git commit -a -m "some comment2"`此操作会将工作区，暂存区的改动一并提交
+    > * `git commit -am "some comment2"`此操作会将工作区，暂存区的改动一并提交
 
 4. 推送到远程仓库
     > `git push -u origin master` 推送到远程仓库`origin`  
@@ -91,8 +91,3 @@
 > `cd ..`
 > 4. 查看当前所在路径
 > `pwd`
-
-学完本篇就可以开始基本的git操作了
-----本文完----
-
-
