@@ -87,3 +87,19 @@
   7. 执行`git commit`,暂存区就没有任何内容了<br>
   ![alt text](https://cdn.liaoxuefeng.com/cdn/files/attachments/0013849077337835a877df2d26742b88dd7f56a6ace3ecf000/0)
 
+# 习题
+   1. 练习&理解pull --rebase
+      > 1. 用户A，B 同步远程服务器的公共分支`dev`
+      > 2. 用户A在分支`dev`的基础上，生成私有分支`feature-A`
+      > 3. 用户A在分支`feature-A`上，做了1次改动，并commit
+      > 4. 用户A在分支`dev`上，merger feature-A分支，并push
+      > 5. 用户B在分支`dev`上, 做了一次修改，并commit
+      > 6. 用户B在分支`dev`上，`git pull`
+      > 7. 用户B回滚第6步 `git reset HEAD^`
+      > 8. 用户B在分支`dev`上，`git pull --rebase`
+
+      理解并分析第6步和第8步区别
+   2. 分支上练习git rebase
+
+[一个成功的Git分支模型](https://www.jianshu.com/p/b357df6794e3)
+[[转] 译：Git rebase VS. Git merge](https://www.jianshu.com/p/ddb3f412b579)
