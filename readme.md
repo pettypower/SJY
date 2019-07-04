@@ -8,9 +8,9 @@
 将工作中学习到的技术知识进行`梳理-->总结-->分享`  
 **当你发现自己的才华撑不起野心时，就请安静下来学习吧**
 
-## 网盘文件夹链接&密码
+## 本分享平台使用到的软件，在以下链接提供
 
-> [百度网盘文件夹链接](https://pan.baidu.com/s/1zqZTMgf7_EcOHC0J9rCGYA)  
+> [网盘链接](https://pan.baidu.com/s/1zqZTMgf7_EcOHC0J9rCGYA)  
 > 密码：hte7
 
 ### 1.版本控制软件
