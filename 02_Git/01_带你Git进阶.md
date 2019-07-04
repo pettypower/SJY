@@ -17,13 +17,13 @@
 ### 1. 撤回命令
 
 1. 放弃工作区修改
-    > `git checkout -- nFile.txt`
+    > `git checkout nFile.txt`
     > 两种可能性
     >  1. 暂存区有此文件，工作区恢复成暂存区版本
     >  2. 暂存区无此文件，工作区恢复成仓库版本
 
 2. 放弃暂存区的内容
-    > - `git reset HEAD nFile.txt`
+    > - `git reset HEAD nFile.txt` 工作区保持原状
 
 3. 撤回仓库区内容：（实际调整的是仓库区的HEAD）
     > - `git reset --hard HEAD^` 将仓库退回到上一个版本（HEAD^^则表示退回到上两个版本，并同步到本地工作区，HEAD~5表示退回到上5个版本）
@@ -117,4 +117,4 @@ Git鼓励大量使用分支
    3. `push`       Update remote refs along with associated objects  
 
 更多命令参考
-[Git常用命令详解](https://www.jianshu.com/p/360bdda5157f "Git")
+[Git常用命令详解](https://www.jianshu.com/p/360bdda5157f "Git")afdfadfadsfad
