@@ -95,9 +95,14 @@
 学完本篇就可以开始基本的git操作了
 ----本文完----
 
+<<<<<<< HEAD
 dev add line1
 dev add line2
 
 dev add for rebase line1
 dev add for rebase line2
 master add line1
+=======
+master add line1
+master add line2
+>>>>>>> master add line2
