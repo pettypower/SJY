@@ -100,3 +100,4 @@ dev add line2
 
 dev add for rebase line1
 dev add for rebase line2
+master add line1
