@@ -5,6 +5,8 @@
 > 作成时间：2018-8-1  
 > 修改时间：2019-7-13
 
+推荐使用`VSCode`做markdown练习 [点我去官网下载](https://code.visualstudio.com/ "vscode")
+
 ## 1. Headers 标题
 
 ```
@@ -217,5 +219,4 @@
 > \\  
 > \_
 
-dev add zouqiang line1
-master add zouqiang line1
+

@@ -138,3 +138,4 @@ Git鼓励大量使用分支
 
 更多命令参考
 [Git常用命令详解](https://www.jianshu.com/p/360bdda5157f "Git")
+[Pro Git book](https://www.git-scm.com/book/en/v2 "Pro Git book")
