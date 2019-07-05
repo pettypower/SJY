@@ -1,0 +1,10 @@
+1. 冲突测试（本地分支merge）
+   > 1. 用户从远程服务器同步公共分支`master` OK
+   > 2. 用户在分支`master`上，生成私有分支`m1` OK
+   > 3. 用户在分支`master`上，生成私有分支`m2`
+   > 4. 用户在`m1`做了1次改动，并commit m1改动这一行
+   > 5. 用户在`m2`做了1次改动(与m1改动同文件，同一行)，并commit
+   > 6. 用户在`m2`上 `git merge  m1`
+   > 7. 在`m2`上产生冲突，解决冲突
+   > 8. `m2`上merge完成
+   > 9. 查看`m2`历史记录 `git log --graph --pretty=oneline --abbrev-commit`
