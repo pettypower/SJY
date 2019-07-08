@@ -13,7 +13,7 @@
 4. 第一次使用Git
 5. 工作中基本命令
 6. 附：Linux最基本命令
-
+git
 ### 1.Git下载与安装启动
 
 > 1. 下载
@@ -69,7 +69,7 @@
 1. 查看最新状态
     > `git status`
 
-2. 提交到暂存区：将改动从 unstaged --> staged
+2. 提交到暂存区：将改动从 unsta ged --> staged
     > `git add nFile.txt`  提交指定文件
     > `git add .`  提交所有文件
 
