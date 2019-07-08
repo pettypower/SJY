@@ -9,3 +9,12 @@
    > 8. `m2`上merge完成
    > 9. 查看`m2`历史记录 `git log --graph --pretty=oneline --abbrev-commit`
    swiftfish add a new line
+
+
+     > 1. 用户在分支`master`上，生成私有分支`m3`
+   > 2. 用户在`m2`做了1次改动，并commit
+   > 3. 用户在`master`上 `git merge m2`
+   > 4. 查看`master`历史记录 `git log --graph --pretty=oneline --abbrev-commit`
+   > 5. `master`回滚操作 `git reset --hard HEAD^`（回到上一题第2步状态）
+   > 6. 用户在`master`上 `git merge --no-ff m2`
+   > 7. 查看`master`历史记录 `git log --graph --pretty=oneline --abbrev-commit`
