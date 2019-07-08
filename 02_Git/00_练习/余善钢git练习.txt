@@ -8,3 +8,4 @@
    > 7. 在`m2`上产生冲突，解决冲突
    > 8. `m2`上merge完成
    > 9. 查看`m2`历史记录 `git log --graph --pretty=oneline --abbrev-commit`
+   swiftfish add a new line
