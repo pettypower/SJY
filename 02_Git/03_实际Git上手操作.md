@@ -117,5 +117,5 @@
 7. 执行`git commit`,暂存区就没有任何内容了
   ![alt text](https://cdn.liaoxuefeng.com/cdn/files/attachments/0013849077337835a877df2d26742b88dd7f56a6ace3ecf000/0)
 
-[一个成功的Git分支模型](https://www.jianshu.com/p/b357df6794e3)
+[一个成功的Git分支模型](https://www.jianshu.com/p/b357df6794e3)  
 [[转] 译：Git rebase VS. Git merge](https://www.jianshu.com/p/ddb3f412b579)
