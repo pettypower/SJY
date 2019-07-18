@@ -63,6 +63,8 @@ git
     > `ssh-keygen -t rsa -C "xiaow@chiquan-jx.com"`
 6. 设置远程仓库简称为`origin`
     > `git remote add origin git@github.com:pettypower/SJY.git`
+    > `git remote set-url origin git@github.com:pettypower/SJY.git` 更新远程仓库地址
+
 
 ### 5.Git基本命令
 
