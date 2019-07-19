@@ -65,7 +65,6 @@ git
     > `git remote add origin git@github.com:pettypower/SJY.git`
     > `git remote set-url origin git@github.com:pettypower/SJY.git` 更新远程仓库地址
 
-
 ### 5.Git基本命令
 
 1. 查看最新状态
