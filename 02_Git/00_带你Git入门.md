@@ -56,13 +56,15 @@ git
 2. 从服务器上Clone一个仓库
     > `git clone ssh://user@domain.com/repo.git`
 3. 设置全局用户名
-    > `git config --global user.name "zouqiang"`
+    > `git config --global user.name "xiaow"`
 4. 设置全局邮箱
-    > `git config --global user.email "qiang.zou@chiquan-jx.com"`
+    > `git config --global user.email "xiaow@chiquan-jx.com"`
 5. 创建SSH公私匙对
-    > `ssh-keygen -t rsa -C "qiang.zou@chiquan-jx.com"`
+    > `ssh-keygen -t rsa -C "xiaow@chiquan-jx.com"`
 6. 设置远程仓库简称为`origin`
     > `git remote add origin git@github.com:pettypower/SJY.git`
+    > `git remote set-url origin git@github.com:pettypower/SJY.git` 更新远程仓库地址
+
 
 ### 5.Git基本命令
 
