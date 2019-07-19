@@ -35,6 +35,7 @@
     > - `git log -p` 显示所有提交记录，并显示每次提交的对比
     > - `git log --stat` 显示所有提交记录，并显示每闪提交`简略`对比
     > - `git log --pretty=oneline` 显示所有提交记录，可以自定义格式`oneline, format="%h - %an"`,如果不指定格式，则与`git log`显示效果一致
+    > - `git log --graph --pretty="%h %cn %cd %s" --date=iso` 显示的日志格式：版本 用户名 日期 日志内容
 
 2. 查看区别
     > - `git diff` 累积在unstaged(工作区)状态的改动
