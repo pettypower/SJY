@@ -100,6 +100,11 @@ Git鼓励大量使用分支
 
 注：标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。
 
+### 6. 其它
+
+1. 解决中文文件名无法正常显示的问题
+    > - `git config --global core.quotepath false`
+
 ### 原汁原味的解释
 
 > start a working area (see also: git help tutorial)
