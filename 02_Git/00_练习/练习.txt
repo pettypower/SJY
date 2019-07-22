@@ -1,7 +1,4 @@
 abc
-
-xiongjun: add line1
-wenwb: add line1
 我是闻大哥
 我是闻大哥1 闻大哥2
 闻大哥23
