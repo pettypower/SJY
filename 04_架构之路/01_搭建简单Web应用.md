@@ -5,14 +5,14 @@
 > 作成时间：2019-7-23  
 > 修改时间：2019-7-23
 
-### 1. 创建IDEA项目
+## 1. 创建IDEA项目
 
 1. Create New Project --> 弹出 New Project 框
 2. 选择 Maven --> Next
 3. GroupId = org.smart4j; ArtifactId = chapter1; Version = 1.0.0 --> Next
 4. ProjectName = chapter1; ProjectLocation= "项目路径" --> Finish
 
-### 2. 调整Maven配置 pom.xml
+## 2. 调整Maven配置 pom.xml
 
 ```xml
 
@@ -91,7 +91,7 @@
 
 ```
 
-### 3. 添加web.xml(转为Web项目)
+## 3. 添加web.xml(转为Web项目)
 
 添加文件/main/webapp/WEB-INF/web.xml
 
@@ -107,7 +107,7 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 
 ```
 
-### 4. 添加Servlet类
+## 4. 添加Servlet类
 
 1. 创建包org.smart4j.chapter1
 2. 在上述包下，创建HelloServlet.java类
@@ -140,7 +140,7 @@ throws ServletException, IOException {
 
 ```
 
-### 5. 添加JSP页面
+## 5. 添加JSP页面
 
 /webapp/WEB-INF/jsp/hello.jsp
 
@@ -159,9 +159,9 @@ throws ServletException, IOException {
 
 ```
 
-### 6. 让Web用户跑起来
+## 6. 让Web用户跑起来
 
-#### 6.1 在IDEA中配置Tomcat
+### 6.1 在IDEA中配置Tomcat
 
 > 1. Run --> Edit Configurations
 > 2. 点击"+", 选择Tomcat-->Local
@@ -174,7 +174,7 @@ throws ServletException, IOException {
 最后，单击IDEA工具栏中的Run或Debug，即可启动Tomcat并部署Web应用  
 注：此方法可实现热部署（需要Ctrl+F9手动编译）
 
-#### 6.2 在IDEA中使用Maven插件
+### 6.2 在IDEA中使用Maven插件
 
 - 在 pom.xml中添加配置
 
@@ -196,7 +196,7 @@ throws ServletException, IOException {
 
 注：此方法可热更新JSP代码，但不能热部署Java代码，也不可以设置断点
 
-#### 6.3 在IDEA中使用Maven插件，并以Debug方式运行
+### 6.3 在IDEA中使用Maven插件，并以Debug方式运行
 
 > 1. Run --> Edit Configurations
 > 2. 点击"+", 选择Maven
@@ -206,7 +206,7 @@ throws ServletException, IOException {
 
 注：JSP改动可立即生效，也可以实现类的热部署
 
-### 7. 其它注意事项
+## 7. 其它注意事项
 
 1. tomcat无法启动，提示：Can't load IA 64-bit .dll on a AMD 64-bit platform
     > 可能是jdk是32位（tomcat是64位）导致
