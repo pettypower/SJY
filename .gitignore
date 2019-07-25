@@ -14,3 +14,4 @@ doc/**/*.pdf
 *.exe
 #*.pdf
 /.vscode
+/target
