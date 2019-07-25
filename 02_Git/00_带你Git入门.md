@@ -55,6 +55,7 @@
     > `git init`
 2. 从服务器上Clone一个仓库
     > `git clone ssh://user@domain.com/repo.git`
+    > `git clone --depth 1 "git@github.com:pettypower/SJY.git"` 克隆最新一个版本（忽略历史版本）
 3. 设置全局用户名
     > `git config --global user.name "zq"`
 4. 设置全局邮箱
