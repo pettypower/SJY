@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:gravity="center">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center|bottom"-->
+            <!--android:orientation="vertical">-->
+           <!---->
+            <!--<ProgressBar-->
+                <!--style="@android:style/Widget.ProgressBar"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="200dp"-->
+                <!--android:indeterminateDrawable="@drawable/load_anim"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_text"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="正在登录"-->
+                <!--android:textColor="#fff"/>-->
+        <!--</LinearLayout>-->
+
+    <!--</RelativeLayout>-->
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avl"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        style="@style/AVLoadingIndicatorView"
+        android:visibility="visible"
+        app:indicatorName="PacmanIndicator"
+        app:indicatorColor="@color/focus_color_4"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

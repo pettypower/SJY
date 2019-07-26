@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">PublicFramework</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载...</string>
+    <string name="submitting">正在提交...</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+
+    <string name="cancle">取消</string>
+    <string name="sure">确定</string>
+    <string name="back">返回</string>
+    <string name="title">请选择时间</string>
+    <string name="commit">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+    <string name="friend_lh">拉黑</string>
+    <string name="friend_lb">拉白</string>
+    <string name="sure_lh">确定要拉黑吗?</string>
+    <string name="sure_lb">确定要拉白吗?</string>
+    <string name="me">我</string>
+    <string name="unknow">未知</string>
+    <string name="colon">:</string>
+</resources>
