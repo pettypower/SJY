@@ -1,0 +1,94 @@
+package com.cqkj.snail.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import com.cqkj.snail.common.base.BaseEntity;
+
+@Entity
+@Table(name = TUser.T_USER)
+public class TUser extends BaseEntity {
+
+    /**
+     *表名映射
+     */
+    static final String T_USER = "T_USER";
+
+    /**
+     * serialVersionUID
+     */
+    private static final long serialVersionUID = 1L;
+    
+    // 用户姓名
+    private String userName;
+    // 登陆名
+    private String loginName;
+    // 登陆密码
+    private String loginPassword;
+    // 联系电话
+    private String phone;
+
+    /**
+     * 获取用户姓名
+     * @return
+     */
+    public String getUserName() {
+        return userName;
+    }
+
+    /**
+     * 设置用户姓名
+     * @param userName
+     */
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    /**
+     * 获取用户登陆名
+     * @return
+     */
+    public String getLoginName() {
+        return loginName;
+    }
+
+    /**
+     * 设置用户登陆名
+     * @param loginName
+     */
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+    /**
+     * 获取用户登陆密码
+     * @return
+     */
+    public String getLoginPassword() {
+        return loginPassword;
+    }
+
+    /**
+     * 设置用户登陆密码
+     * @param loginPassword
+     */
+    public void setLoginPassword(String loginPassword) {
+        this.loginPassword = loginPassword;
+    }
+
+    /**
+     * 获取电话号码
+     * @return
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * 设置电话号码
+     * @param phone
+     */
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+}

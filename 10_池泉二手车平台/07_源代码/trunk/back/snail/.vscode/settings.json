@@ -12,4 +12,5 @@
     ],
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.configuration.updateBuildConfiguration": "automatic",
 }
