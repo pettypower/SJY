@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#ff1152</color>
+
+    <color name="editText_bg">#404040</color>
+
+    <color name="layout_bg">#f8ffff</color><!--卡片背景颜色 -->
+    <color name="line_bg">#353535</color><!--线条颜色 -->
+    <color name="hint_text_color">#9ea8a8</color><!--注释内容及未触发按钮颜色 -->
+    <color name="item_text_color">#727d7c</color><!--所有表单标题 -->
+    <color name="item_value_color">#9ea8a8</color>
+    <color name="layout_title_color">#455151</color><!--所有正文标题 -->
+    <color name="detail_title_color">#1bbce2</color>
+    <color name="activity_title_text_color">#fff</color>
+    <color name="activity_title_bg_color">#1bbce2</color>
+    <color name="activity_bg">#272727</color><!--页面背景颜色 -->
+    <color name="focus_color">#ef8200</color>
+    <color name="focus_color_2">#1bbce2</color>
+    <color name="focus_color_3">#ff3333</color>
+    <color name="focus_color_4">#FE346C</color>
+    <color name="no_focus_color">#9ea8a8</color>
+
+    <color name="textcolor">#fff</color>
+    <color name="white">#fff</color>
+    <color name="swipeRefreshcolor">#ff326d</color>
+    <color name="light_black">#3C4848</color>
+    <color name="black">#000000</color>
+    <color name="black_light">#272727</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="text2">#333333</color>
+    <color name="color_d6d6d6">#d6d6d6</color>
+    <color name="color_7a7a7a">#7a7a7a</color>
+    <color name="color_1a1a1a">#1a1a1a</color>
+
+</resources>

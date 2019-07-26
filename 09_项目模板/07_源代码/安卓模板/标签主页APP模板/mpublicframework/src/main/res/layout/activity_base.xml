@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/base_main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/base_title_main_layout"
+        android:background="@color/activity_bg"
+        android:orientation="vertical" />
+    <!--其他布局-->
+    <RelativeLayout
+        android:id="@+id/base_other_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+    <!--标题栏-->
+    <RelativeLayout
+        android:id="@+id/base_title_main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_hight"
+        android:background="@color/black">
+
+        <!--回退键-->
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/title_back"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/listview_title_size" />
+        <!--<ImageView-->
+        <!--android:id="@+id/base_back"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:contentDescription="@null"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:src="@mipmap/title_back" />-->
+
+        <!--标题-->
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/base_title_layout"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_centerInParent="true">-->
+
+        <TextView
+            android:id="@+id/base_title_text"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/activity_title_text_color"
+            android:textSize="@dimen/activity_title_size" />
+
+
+        <!--</RelativeLayout>-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/base_title_do2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" />
+            <!--右边的菜单-->
+            <TextView
+                android:id="@+id/base_title_do"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColor="@color/activity_title_text_color"
+                android:textSize="@dimen/listview_title_size" />
+
+            <ImageView
+                android:id="@+id/base_title_do3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="13dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

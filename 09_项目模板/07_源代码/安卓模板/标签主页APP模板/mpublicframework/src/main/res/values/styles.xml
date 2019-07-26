@@ -1,0 +1,40 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light"/>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="mProgress_circle">
+        <item name="android:minWidth">100dp</item>
+        <item name="android:minHeight">100dp</item>
+        <item name="android:maxWidth">100dp</item>
+        <item name="android:maxHeight">100dp</item>
+    </style>
+    <style name="dialogStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="time_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+    <style name="hLine">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/line</item>
+        <item name="android:background">@color/line_bg</item>
+    </style>
+    <style name="LightHLine" parent="hLine">
+        <item name="android:background">@color/line_bg</item>
+    </style>
+
+</resources>
