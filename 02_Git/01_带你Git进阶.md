@@ -104,6 +104,19 @@ Git鼓励大量使用分支
 
 1. 解决中文文件名无法正常显示的问题
     > - `git config --global core.quotepath false`
+2. `.gitignore`文件忽略
+    1. 基本规则
+        > - `.gitignore`可以放在任何目录中,作用范围是其所处的目录及子目录
+        > - `git add -f hello.java`强行添加被忽略的文件
+        > - 忽略只对未跟踪的文件有效, 对于已加入版本库的文件无效
+    2. Git忽略语法如下
+        1. `#` 开始的行会被忽略  
+        2. `*.a` 忽略所有以.a为扩展名的文件
+        3. `??.a` 忽略所有文件名为两位英文且扩展名为.a的文件
+        4. `[abc].java` 忽略所有 a.java, b.java, c.java
+        5. `/Name` 忽略当前目录下的Name文件夹,但不包括Name下的子目录
+        6. `Name/` 忽略所有叫[Name]的文件夹下所有文件
+        7. `doc/*.txt` 忽略文件如doc/notes.txt,但不忽略doc/ser/arch.txt不被忽略
 
 ### 原汁原味的解释
 
