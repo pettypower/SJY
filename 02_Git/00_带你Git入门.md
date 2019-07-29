@@ -55,7 +55,7 @@
     > `git init`
 2. 从服务器上Clone一个仓库
     > `git clone ssh://user@domain.com/repo.git`
-    > `git clone --depth 1 "git@github.com:pettypower/SJY.git"` 克隆最新一个版本（忽略历史版本）
+    > `git clone --depth 20 "git@github.com:pettypower/SJY.git"` 克隆最新20个版本（忽略更早历史版本）
 3. 设置全局用户名
     > `git config --global user.name "zq"`
 4. 设置全局邮箱
@@ -65,6 +65,7 @@
 6. 设置远程仓库简称为`origin`
     > `git remote add origin git@github.com:zq/SJY.git`
     > `git remote set-url origin git@github.com:zq/SJY.git` 更新远程仓库地址
+    > `git remote -v` 查看远程仓库
 
 ### 5.Git基本命令
 
