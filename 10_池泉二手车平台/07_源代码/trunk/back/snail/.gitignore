@@ -28,4 +28,4 @@ target/
 build/
 
 ### VS Code ###
-#.vscode/
+.vscode
