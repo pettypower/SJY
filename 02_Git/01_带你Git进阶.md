@@ -116,7 +116,7 @@ Git鼓励大量使用分支
         4. `[abc].java` 忽略所有 a.java, b.java, c.java
         5. `/Name` 忽略当前目录下的Name文件夹,但不包括Name下的子目录
         6. `Name/` 忽略所有叫[Name]的文件夹下所有文件
-        7. `doc/*.txt` 忽略文件如doc/notes.txt,但不忽略doc/ser/arch.txt不被忽略
+        7. `doc/*.txt` 忽略文件如doc/notes.txt,但不忽略doc/ser/arch.txt
 
 ### 原汁原味的解释
 
