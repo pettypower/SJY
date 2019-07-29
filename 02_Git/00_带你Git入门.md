@@ -55,7 +55,8 @@
     > `git init`
 2. 从服务器上Clone一个仓库
     > `git clone ssh://user@domain.com/repo.git`
-    > `git clone --depth 20 "git@github.com:pettypower/SJY.git"` 克隆最新20个版本（忽略更早历史版本）
+    > `git clone --depth 20 "git@github.com:pettypower/SJY.git"` 克隆默认分支最新20个版本（忽略更早历史版本）
+    > `git clone --depth 20 -b zouq_html "git@github.com:pettypower/SJY.git"` 克隆指定分支[zouq_html]最新20个版本（忽略更早历史版本）
 3. 设置全局用户名
     > `git config --global user.name "zq"`
 4. 设置全局邮箱
