@@ -21,10 +21,11 @@
     >  2. 暂存区无此文件时，工作区恢复成仓库版本
 
 2. 放弃暂存区的内容
-    > - `git reset HEAD nFile.txt` （工作区保持原状）
+    > - `git reset HEAD` （工作区保持原状）
 
 3. 撤回仓库区内容：（实际调整的是仓库区的HEAD）
-    > - `git reset --hard HEAD^` 将仓库退回到上一个版本（HEAD^^则表示退回到上两个版本，并同步到本地工作区，HEAD~5表示退回到上5个版本）
+    > - `git reset --hard HEAD^` 将仓库退回到上一个版本, 暂存区清空,工作区与仓库一致（HEAD^^则表示退回到上两个版本，并同步到本地工作区，HEAD~5表示退回到上5个版本）
+    > - `git reset --soft HEAD^` 将仓库退回到上一个版本,但是工作区, 暂存区不受影响
     > - `git reflog` 命令历史
     > - `git reset --hard 版本号` 将仓库的HEAD指向某版本（可前进，可后退）
 
@@ -44,7 +45,7 @@
     > - `git diff --staged` 累积在staged状态的改动
     > - `git diff HEAD -- nFile.txt` 查看工作区与版本库最新版本区别（nFile.txt文件）
 
-3. 改写提交
+3. 改写最后一次提交注释
     > - `git commit --amend`
 
 ### 3. 分支管理
@@ -100,23 +101,25 @@ Git鼓励大量使用分支
 
 注：标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。
 
-### 6. 其它
+### 6. `.gitignore`文件忽略
+
+1. 基本规则
+    > - `.gitignore`可以放在任何目录中,作用范围是其所处的目录及子目录
+    > - `git add -f hello.java`强行添加被忽略的文件
+    > - 忽略只对未跟踪的文件有效, 对于已加入版本库的文件无效
+2. Git忽略语法如下
+    1. `#` 开始的行会被忽略  
+    2. `*.a` 忽略所有以.a为扩展名的文件
+    3. `??.a` 忽略所有文件名为两位英文且扩展名为.a的文件
+    4. `[abc].java` 忽略所有 a.java, b.java, c.java
+    5. `/Name` 忽略当前目录下的Name文件夹,但不包括Name下的子目录
+    6. `Name/` 忽略所有叫[Name]的文件夹下所有文件
+    7. `doc/*.txt` 忽略文件如doc/notes.txt,但不忽略doc/ser/arch.txt
+
+### 7. 其它
 
 1. 解决中文文件名无法正常显示的问题
     > - `git config --global core.quotepath false`
-2. `.gitignore`文件忽略
-    1. 基本规则
-        > - `.gitignore`可以放在任何目录中,作用范围是其所处的目录及子目录
-        > - `git add -f hello.java`强行添加被忽略的文件
-        > - 忽略只对未跟踪的文件有效, 对于已加入版本库的文件无效
-    2. Git忽略语法如下
-        1. `#` 开始的行会被忽略  
-        2. `*.a` 忽略所有以.a为扩展名的文件
-        3. `??.a` 忽略所有文件名为两位英文且扩展名为.a的文件
-        4. `[abc].java` 忽略所有 a.java, b.java, c.java
-        5. `/Name` 忽略当前目录下的Name文件夹,但不包括Name下的子目录
-        6. `Name/` 忽略所有叫[Name]的文件夹下所有文件
-        7. `doc/*.txt` 忽略文件如doc/notes.txt,但不忽略doc/ser/arch.txt
 
 ### 原汁原味的解释
 
