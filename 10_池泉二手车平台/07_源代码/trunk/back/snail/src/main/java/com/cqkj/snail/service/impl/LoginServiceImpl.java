@@ -18,9 +18,6 @@ public class LoginServiceImpl implements LoginService {
             loginResult.setResult("用户名或者密码为空");
             return loginResult;
         }
-
-
-
         return loginResult;
     }
 

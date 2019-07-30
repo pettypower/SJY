@@ -31,6 +31,16 @@ public class UserServiceImpl implements UserService {
     public void saveUser(TUser user) {
         userRepository.save(user);
     }
+    
+
+    @Override
+    public void editUser(TUser user) {
+        TUser userInfo = userRepository.getOne(user.getId());
+        userInfo.setUserName(user.getUserName());
+        userInfo.setLoginName(user.getLoginName());
+        userInfo.setLoginPassword(user.getLoginPassword());
+        userRepository.save(userInfo);
+    }
 
     @Override
     public void deleteUser(TUser user) {

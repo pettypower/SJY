@@ -52,6 +52,20 @@ public class UserController {
     }
 
     /**
+     * 用户编辑;
+     * @return
+     */
+    @PostMapping("/edit")
+    public ResponseVO editUser(@RequestBody TUser user) {
+        ResponseVO response = new ResponseVO();
+        userService.editUser(user);
+        response.status(true);
+        response.message(MESSAGE);
+        response.data("");
+        return response;
+    }
+
+    /**
      * 用户删除;
      * @return
      */
