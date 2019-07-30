@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <dl>
+        <dt> embed 声音播放</dt>
+        <dd>
+            <embed height="200" width="500" src="https://www.w3cschool.cn/statics/demosource/horse.mp3">
+        </dd>
+        <dt> object 声音播放</dt>
+        <dd>
+            <object height="200" width="500" data="https://www.w3cschool.cn/statics/demosource/horse.mp3"></object>
+        </dd>
+        <dt> audio 声音播放</dt>
+        <dd>
+            <audio controls>
+                <!-- Internet Explorer、Chrome 以及 Safari 中是有效的 -->
+                <source src="https://www.w3cschool.cn/statics/demosource/horse.mp3" type="audio/mpeg">
+                <!-- Firefox 和 Opera浏览器中有效 -->
+                <source src="https://www.w3cschool.cn/statics/demosource/horse.ogg" type="audio/ogg">
+                Your browser does not support this audio format.
+            </audio>
+        </dd>
+        <dt> 综合方法(最优)声音播放</dt>
+        <dd>
+            <!-- <audio> 元素会尝试以 mp3 或 ogg 来播放音频 -->
+            <audio controls height="100" width="100">
+            <source src="https://www.w3cschool.cn/statics/demosource/horse.mp3" type="audio/mpeg">
+            <source src="https://www.w3cschool.cn/statics/demosource/horse.ogg" type="audio/ogg">
+            <!-- 如果失败，代码将回退尝试 <embed> 元素 -->
+            <embed height="50" width="100" src="https://www.w3cschool.cn/statics/demosource/horse.mp3">
+            </audio>
+        </dd>
+        <dt>使用超链接</dt>
+        <dd>
+            <a href="https://www.w3cschool.cn/statics/demosource/horse.mp3">Play the sound</a>
+        </dd>
+
+        <dt>综合方法(最优)视频播放</dt>
+        <dd>
+            <!-- <video> 元素会尝试播放以 mp4、ogg 或 webm 格式中的一种来播放视频 -->
+            <video width="320" height="240" controls>
+                <source src="https://www.w3cschool.cn/statics/demosource/movie.mp4" type="video/mp4">
+                <source src="https://www.w3cschool.cn/statics/demosource/movie.ogg" type="video/ogg">
+                <source src="https://www.w3cschool.cn/statics/demosource/movie.webm" type="video/webm">
+                <!-- 如果均失败，则回退到 <embed> -->
+                <object data="https://www.w3cschool.cn/statics/demosource/movie.mp4" width="320" height="240">
+                    <embed src="https://www.w3cschool.cn/statics/demosource/movie.swf" width="320" height="240">
+                </object> 
+            </video>
+        </dd>
+
+        
+    </dl>
+</body>
+
+</html>
