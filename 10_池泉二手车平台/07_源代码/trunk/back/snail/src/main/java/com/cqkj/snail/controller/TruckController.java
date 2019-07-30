@@ -5,8 +5,8 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import com.cqkj.snail.common.domain.ResponseVO;
-import com.cqkj.snail.domain.TUser;
-import com.cqkj.snail.service.UserService;
+import com.cqkj.snail.domain.TTruck;
+import com.cqkj.snail.service.TruckService;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,50 +15,50 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/userInfo")
-public class UserController {
+@RequestMapping("/truckInfo")
+public class TruckController {
 
     @Resource
-    UserService userService;
+    TruckService truckService;
 
     private static final String MESSAGE = "执行成功";
 
     /**
-     * 用户列表查询.
-     * @return 用户信息列表
+     * 字典查询.
+     * @return 字典信息列表
      */
     @RequestMapping("/list")
-    public ResponseVO listUser() {
+    public ResponseVO listTruck() {
         ResponseVO response = new ResponseVO();
-        List<TUser> userInfoList = userService.findAll();
+        List<TTruck> truckInfoList = truckService.findAll();
         response.status(true);
         response.message(MESSAGE);
-        response.data(userInfoList);
+        response.data(truckInfoList);
         return response;
     }
 
     /**
-     * 用户查询;
-     * @return 用户信息
+     * 字典查看;
+     * @return
      */
     @PostMapping("/view")
-    public ResponseVO viewDict(@RequestBody TUser user) {
+    public ResponseVO viewTruck(@RequestBody TTruck truck) {
         ResponseVO response = new ResponseVO();
-        TUser duserInfo = userService.findById(user);
+        TTruck truckInfo = truckService.findById(truck);
         response.status(true);
         response.message(MESSAGE);
-        response.data(duserInfo);
+        response.data(truckInfo);
         return response;
     }
 
     /**
-     * 用户添加;
+     * 字典添加;
      * @return
      */
     @PostMapping("/save")
-    public ResponseVO saveUser(@RequestBody TUser user) {
+    public ResponseVO saveTruck(@RequestBody TTruck truck) {
         ResponseVO response = new ResponseVO();
-        userService.saveUser(user);
+        truckService.saveTruck(truck);
         response.status(true);
         response.message(MESSAGE);
         response.data("");
@@ -66,13 +66,13 @@ public class UserController {
     }
 
     /**
-     * 用户编辑;
+     * 字典编辑;
      * @return
      */
     @PostMapping("/edit")
-    public ResponseVO editUser(@RequestBody TUser user) {
+    public ResponseVO editTruck(@RequestBody TTruck truck) {
         ResponseVO response = new ResponseVO();
-        userService.editUser(user);
+        truckService.editTruck(truck);
         response.status(true);
         response.message(MESSAGE);
         response.data("");
@@ -80,13 +80,13 @@ public class UserController {
     }
 
     /**
-     * 用户删除;
+     * 字典删除;
      * @return
      */
     @PostMapping("/delete")
-    public ResponseVO deleteUser(@RequestBody TUser user) {
+    public ResponseVO deleteTruck(@RequestBody TTruck truck) {
         ResponseVO response = new ResponseVO();
-        userService.deleteUser(user);
+        truckService.deleteTruck(truck);
         response.status(true);
         response.message(MESSAGE);
         response.data("");

@@ -5,8 +5,8 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import com.cqkj.snail.common.domain.ResponseVO;
-import com.cqkj.snail.domain.TUser;
-import com.cqkj.snail.service.UserService;
+import com.cqkj.snail.domain.TDict;
+import com.cqkj.snail.service.DictService;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,50 +15,50 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/userInfo")
-public class UserController {
+@RequestMapping("/dictInfo")
+public class DictController {
 
     @Resource
-    UserService userService;
+    DictService dictService;
 
     private static final String MESSAGE = "执行成功";
 
     /**
-     * 用户列表查询.
-     * @return 用户信息列表
+     * 字典查询.
+     * @return 字典信息列表
      */
     @RequestMapping("/list")
-    public ResponseVO listUser() {
+    public ResponseVO listDict() {
         ResponseVO response = new ResponseVO();
-        List<TUser> userInfoList = userService.findAll();
+        List<TDict> dictInfoList = dictService.findAll();
         response.status(true);
         response.message(MESSAGE);
-        response.data(userInfoList);
+        response.data(dictInfoList);
         return response;
     }
 
     /**
-     * 用户查询;
-     * @return 用户信息
+     * 字典查看;
+     * @return
      */
     @PostMapping("/view")
-    public ResponseVO viewDict(@RequestBody TUser user) {
+    public ResponseVO viewDict(@RequestBody TDict dict) {
         ResponseVO response = new ResponseVO();
-        TUser duserInfo = userService.findById(user);
+        TDict dictInfo = dictService.findById(dict);
         response.status(true);
         response.message(MESSAGE);
-        response.data(duserInfo);
+        response.data(dictInfo);
         return response;
     }
 
     /**
-     * 用户添加;
+     * 字典添加;
      * @return
      */
     @PostMapping("/save")
-    public ResponseVO saveUser(@RequestBody TUser user) {
+    public ResponseVO saveDict(@RequestBody TDict dict) {
         ResponseVO response = new ResponseVO();
-        userService.saveUser(user);
+        dictService.saveDict(dict);
         response.status(true);
         response.message(MESSAGE);
         response.data("");
@@ -66,13 +66,13 @@ public class UserController {
     }
 
     /**
-     * 用户编辑;
+     * 字典编辑;
      * @return
      */
     @PostMapping("/edit")
-    public ResponseVO editUser(@RequestBody TUser user) {
+    public ResponseVO editDict(@RequestBody TDict dict) {
         ResponseVO response = new ResponseVO();
-        userService.editUser(user);
+        dictService.editDict(dict);
         response.status(true);
         response.message(MESSAGE);
         response.data("");
@@ -80,13 +80,13 @@ public class UserController {
     }
 
     /**
-     * 用户删除;
+     * 字典删除;
      * @return
      */
     @PostMapping("/delete")
-    public ResponseVO deleteUser(@RequestBody TUser user) {
+    public ResponseVO deleteDict(@RequestBody TDict dict) {
         ResponseVO response = new ResponseVO();
-        userService.deleteUser(user);
+        dictService.deleteDict(dict);
         response.status(true);
         response.message(MESSAGE);
         response.data("");

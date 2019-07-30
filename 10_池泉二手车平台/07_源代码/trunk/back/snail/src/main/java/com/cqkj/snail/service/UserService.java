@@ -9,6 +9,8 @@ public interface UserService {
 
     List<TUser> findAll();
 
+	TUser findById(TUser user);
+
     void saveUser(TUser user);
 
     void editUser(TUser user);

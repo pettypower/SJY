@@ -10,7 +10,7 @@ import com.cqkj.snail.common.base.BaseEntity;
 public class TUser extends BaseEntity {
 
     /**
-     *表名映射
+     * 表名映射
      */
     static final String T_USER = "T_USER";
 
