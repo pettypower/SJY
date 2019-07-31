@@ -8,6 +8,9 @@ import com.cqkj.snail.domain.TTruck;
 import com.cqkj.snail.repository.TruckRepository;
 import com.cqkj.snail.service.TruckService;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 
@@ -25,6 +28,11 @@ public class TruckServiceImpl implements TruckService {
     @Override
     public List<TTruck> findAll() {
         return truckRepository.findAll();
+    }
+
+    @Override
+    public Page<TTruck> findAll(Specification<TTruck> specification,  Pageable pageable) {
+        return truckRepository.findAll(specification, pageable);
     }
 
     @Override

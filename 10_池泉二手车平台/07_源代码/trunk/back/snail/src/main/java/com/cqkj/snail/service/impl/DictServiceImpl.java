@@ -8,8 +8,10 @@ import com.cqkj.snail.domain.TDict;
 import com.cqkj.snail.repository.DictRepository;
 import com.cqkj.snail.service.DictService;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-
 
 @Service
 public class DictServiceImpl implements DictService {
@@ -25,6 +27,11 @@ public class DictServiceImpl implements DictService {
     @Override
     public List<TDict> findAll() {
         return dictRepository.findAll();
+    }
+
+    @Override
+    public Page<TDict> findAll(Specification<TDict> specification,  Pageable pageable) {
+        return dictRepository.findAll(specification, pageable);
     }
 
     @Override

@@ -8,6 +8,9 @@ import com.cqkj.snail.domain.TUser;
 import com.cqkj.snail.repository.UserRepository;
 import com.cqkj.snail.service.UserService;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 
@@ -25,6 +28,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<TUser> findAll() {
         return userRepository.findAll();
+    }
+
+    @Override
+    public Page<TUser> findAll(Specification<TUser> specification,  Pageable pageable) {
+        return userRepository.findAll(specification, pageable);
     }
 
     @Override

@@ -7,6 +7,9 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -56,6 +59,22 @@ public abstract class BaseEntity implements Serializable {
      */
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime updateTime;
+
+    /**
+     * 页码
+     * @return
+     */
+    @Transient
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Integer pageNo;
+
+    /**
+     * 数据条数
+     * @return
+     */
+    @Transient
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Integer pageSize;
 
     /**
      * 获取主键（id）
@@ -135,5 +154,38 @@ public abstract class BaseEntity implements Serializable {
      */
     public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
+    }
+
+    /**
+     * 获取页码
+     * 
+     * @return
+     */
+    public Integer getPageNo() {
+        return pageNo;
+    }
+
+    /**
+     * 设置页码
+     * @param pageNo
+     */
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    /**
+     * 获取页面数据条数
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * 设置页面数据条数
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 }
