@@ -57,4 +57,9 @@ public class TruckServiceImpl implements TruckService {
         truckRepository.delete(truck);
     }
 
+    @Override
+    public int addTwoNumber(int frist, int second){
+        return frist + second;
+    }
+
 }

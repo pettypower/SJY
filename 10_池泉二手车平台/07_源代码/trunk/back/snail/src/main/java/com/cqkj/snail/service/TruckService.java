@@ -22,4 +22,6 @@ public interface TruckService {
     void editTruck(TTruck truck);
 
     void deleteTruck(TTruck truck);
+
+    int addTwoNumber(int frist, int second);
 }
