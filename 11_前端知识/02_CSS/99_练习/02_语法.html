@@ -1,0 +1,31 @@
+<html>
+<head>
+    <style>
+        /* 派生 */
+        #sidebar p {
+            font-style: italic;
+            text-align: right;
+            margin-top: 0.5em;
+            color: rgb(42, 165, 173);
+            }
+
+        /* 派生 */
+        div #abc{
+            font-size: 50px;
+        }
+
+        /* id 选择器即使不被用来创建派生选择器，它也可以独立发挥作用 */
+        #red {color:red;}
+        #green {color:green;}
+
+        
+    </style>
+</head>
+<body>
+    <p id="red">这个段落是红色。</p>
+    <p id="green">这个段落是绿色。</p>
+    <div id="sidebar">
+        <p id="abc">abc</p>
+    </div>
+</body>
+</html>
