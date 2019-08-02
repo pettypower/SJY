@@ -1,6 +1,13 @@
 package com.cqkj.snail.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.cqkj.snail.common.base.BaseEntity;
@@ -36,5 +43,12 @@ public class TDict extends BaseEntity {
 
     // 排序号
     private Integer orderNumber;
+
+    /**
+     * 子类
+     */
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "parentId", referencedColumnName = "dictCode")
+    private List<TDict> children = new ArrayList<>();
 
 }

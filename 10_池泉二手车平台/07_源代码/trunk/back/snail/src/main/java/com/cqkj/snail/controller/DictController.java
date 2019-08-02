@@ -48,6 +48,20 @@ public class DictController {
         response.data(dictInfoList);
         return response;
     }
+
+    /**
+     * 根据字典编码查询字典详情.
+     * @return 字典信息详情
+     */
+    @PostMapping("/getByCode")
+    public ResponseVO getByCode(@RequestBody TDict dict) {
+        ResponseVO response = new ResponseVO();
+        TDict dictInfo = dictService.findByCode(dict.getDictCode());
+        response.status(true);
+        response.message(MESSAGE);
+        response.data(dictInfo);
+        return response;
+    }
     
     /**
      * 字典分页查询.
