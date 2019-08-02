@@ -10,11 +10,9 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.cqkj.snail.common.domain.ResponseVO;
 import com.cqkj.snail.domain.TArea;
 import com.cqkj.snail.service.AreaService;
-import com.fasterxml.jackson.annotation.JsonCreator;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.domain.Page;

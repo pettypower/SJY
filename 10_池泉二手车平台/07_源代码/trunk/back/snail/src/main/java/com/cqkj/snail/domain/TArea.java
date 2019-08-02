@@ -49,8 +49,7 @@ public class TArea extends BaseEntity {
      * 子类
      */
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "parentId")
-    @OrderBy("areaLevel asc")
+    @JoinColumn(name = "parentId", referencedColumnName = "adcode")
     private List<TArea> children = new ArrayList<>();
 
 }
