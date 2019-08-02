@@ -1,0 +1,59 @@
+{
+	"id": "a4ed4288-ed4a-4b73-a87c-d86dafaa9c87",
+	"name": "登录模块",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"c3020842-4bed-4488-969c-3ddd50abb8b1",
+		"f3b91d4b-ede2-4d32-886d-4c924ad2e607"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "c3020842-4bed-4488-969c-3ddd50abb8b1",
+			"name": "注册",
+			"url": "",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "f3b91d4b-ede2-4d32-886d-4c924ad2e607",
+			"name": "登录",
+			"url": "http://localhost:8080/api/login",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"loginName\" : \"zouq\",\n\t\"loginPassword\" : \"888888\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}

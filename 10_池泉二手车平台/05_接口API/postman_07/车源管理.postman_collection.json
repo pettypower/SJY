@@ -1,0 +1,105 @@
+{
+	"id": "368d2195-3a28-429b-afe2-3fc1480c746e",
+	"name": "车源管理",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"14c6f8b3-66c0-40c7-bff9-faf55f3901a5",
+		"99c384ac-6f35-4013-91b4-fd51e3600b27",
+		"c6a56966-07ef-4957-8e1d-037fe38f2de1"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "14c6f8b3-66c0-40c7-bff9-faf55f3901a5",
+			"name": "卖车(保存)",
+			"url": "http://localhost:8080/truckInfo/save",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"vehicleType\":\"1\",\n\t\"mileage\":\"2\",\n\t\"engineBrand\":\"3\",\n\t\"fuelType\":\"4\",\n\t\"emissionStandard\":\"5\",\n\t\"vehicleBrand\":\"6\",\n\t\"vehicleSystem\":\"7\",\n\t\"colour\":\"8\",\n\t\"horsePower\":\"9\",\n\t\"drivingMode\":\"10\",\n\t\"attachmentPic\":\"\",\n\t\"price\":\"11\",\n\t\"status\":\"\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "99c384ac-6f35-4013-91b4-fd51e3600b27",
+			"name": "列表查询(列表)",
+			"url": "http://localhost:8080/truckInfo/list",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c6a56966-07ef-4957-8e1d-037fe38f2de1",
+			"name": "详情查询(查询)",
+			"url": "http://localhost:8080/truckInfo/view",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "Id",
+					"value": "2c9198f66c46afab016c46ccc74e0000",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"id\":\"2c9198f66c46afab016c46ccc74e0000\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}

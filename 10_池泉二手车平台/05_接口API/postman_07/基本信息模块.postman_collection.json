@@ -1,0 +1,381 @@
+{
+	"id": "c1938bc8-ea99-49d9-8cd6-6729e2f6a615",
+	"name": "基本信息模块",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"84c3194a-560b-48c5-af67-23d97d42ef95",
+		"ebab8fe6-f09b-40c3-bcbd-c2e0e313d907",
+		"420f2891-3a73-4dc9-91d1-d97049e7ce94"
+	],
+	"folders": [
+		{
+			"id": "84c3194a-560b-48c5-af67-23d97d42ef95",
+			"name": "人员管理",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "c1938bc8-ea99-49d9-8cd6-6729e2f6a615",
+			"folder": null,
+			"order": [
+				"469ce1f2-6fdf-4e5e-9a95-647caa9352e1",
+				"4d092356-0cb5-4c68-84ba-d6bd5b04cc0b",
+				"83b10c01-f86e-41b0-b33e-889e8b46c45d",
+				"fb14f128-a83c-441a-9766-fd9535efe7a1",
+				"5f319dc7-94ae-43e9-b353-c8438755414d"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "420f2891-3a73-4dc9-91d1-d97049e7ce94",
+			"name": "地域管理",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "c1938bc8-ea99-49d9-8cd6-6729e2f6a615",
+			"folder": null,
+			"order": [
+				"cbf00b70-0846-4d0b-9199-60cf9b72a861",
+				"8ff1757a-0e5e-4109-8f5e-5766f083b669"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "ebab8fe6-f09b-40c3-bcbd-c2e0e313d907",
+			"name": "数据字典管理",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "c1938bc8-ea99-49d9-8cd6-6729e2f6a615",
+			"folder": null,
+			"order": [
+				"04b1615d-3cd9-4ba0-9955-6139efb50c2e",
+				"0d245739-7cc8-44c2-b1c9-c5d3d585d193",
+				"bafd5b42-c666-48cf-91fd-1ca9e9b44cc2",
+				"00442c9c-2849-4f0c-aa90-5dcf344350c3",
+				"13f9707c-49d2-45a3-afde-141b8c29c50a"
+			],
+			"folders_order": []
+		}
+	],
+	"requests": [
+		{
+			"id": "00442c9c-2849-4f0c-aa90-5dcf344350c3",
+			"name": "删除",
+			"url": "http://localhost:8080/dictInfo/delete",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "ebab8fe6-f09b-40c3-bcbd-c2e0e313d907",
+			"rawModeData": "{\n\t\"id\": \"2c9198f66c46afab016c4749edfd0005\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "04b1615d-3cd9-4ba0-9955-6139efb50c2e",
+			"name": "新增(保存)",
+			"url": "http://localhost:8080/dictInfo/save",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3deef9a8-0831-4e94-be1c-1d7221820a03",
+						"exec": [
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Your test status\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.status).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"folder": "ebab8fe6-f09b-40c3-bcbd-c2e0e313d907",
+			"rawModeData": "{\n\t\"parentId\":\"{{parentId}}\",\n\t\"dictName\":\"{{dictName}}\",\n\t\"dictCode\":\"{{dictCode}}\",\n\t\"orderNumber\":\"{{orderNumber}}\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0d245739-7cc8-44c2-b1c9-c5d3d585d193",
+			"name": "修改(保存)",
+			"url": "http://localhost:8080/dictInfo/edit",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "ebab8fe6-f09b-40c3-bcbd-c2e0e313d907",
+			"rawModeData": "{\n\t\"id\":\"2c9198f66c4ae4ba016c4ae9b37c0000\",\n\t\"parentId\":\"{{parentId}}\",\n\t\"dictName\":\"{{dictName}}\",\n\t\"dictCode\":\"{{dictCode}}\",\n\t\"orderNumber\":\"{{orderNumber}}\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "13f9707c-49d2-45a3-afde-141b8c29c50a",
+			"name": "字典列表(列表)",
+			"url": "http://localhost:8080/dictInfo/list",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "ebab8fe6-f09b-40c3-bcbd-c2e0e313d907",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "469ce1f2-6fdf-4e5e-9a95-647caa9352e1",
+			"name": "信息查询(详情)",
+			"url": "http://localhost:8080/userInfo/view",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "84c3194a-560b-48c5-af67-23d97d42ef95",
+			"rawModeData": "{\n\t\"id\":\"2c9198f66c46afab016c46fbc9dc0001\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4d092356-0cb5-4c68-84ba-d6bd5b04cc0b",
+			"name": "信息调整(保存)",
+			"url": "http://localhost:8080/userInfo/edit",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "84c3194a-560b-48c5-af67-23d97d42ef95",
+			"rawModeData": "{\n        \"id\": \"2c9198f66c46afab016c46fbc9dc0001\",\n        \"createUser\": null,\n        \"createTime\": null,\n        \"updateUser\": null,\n        \"updateTime\": null,\n        \"userName\": \"邹强\",\n        \"loginName\": \"zouq\",\n        \"loginPassword\": \"888888\",\n        \"phone\": \"123XXXOOOXX\"\n    }",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "5f319dc7-94ae-43e9-b353-c8438755414d",
+			"name": "信息查询(列表)",
+			"url": "http://localhost:8080/userInfo/list",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "84c3194a-560b-48c5-af67-23d97d42ef95",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "83b10c01-f86e-41b0-b33e-889e8b46c45d",
+			"name": "删除",
+			"url": "http://localhost:8080/userInfo/delete",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "84c3194a-560b-48c5-af67-23d97d42ef95",
+			"rawModeData": "{\n\t\"id\":\"2c9198b86c2d6e9b016c2d73aefd0003\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "8ff1757a-0e5e-4109-8f5e-5766f083b669",
+			"name": "查询(列表)",
+			"url": "http://localhost:8080/AreaInfo/listByAdcode",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "420f2891-3a73-4dc9-91d1-d97049e7ce94",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "{\n\n\t\"adcode\":\"100000\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "bafd5b42-c666-48cf-91fd-1ca9e9b44cc2",
+			"name": "字典详情(查询)",
+			"url": "http://localhost:8080/dictInfo/view",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "ebab8fe6-f09b-40c3-bcbd-c2e0e313d907",
+			"rawModeData": "{\n\t\"id\": \"2c9198f66c46afab016c47157bfd0003\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cbf00b70-0846-4d0b-9199-60cf9b72a861",
+			"name": "新增(保存)",
+			"url": "http://localhost:8080/AreaInfo/save",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "420f2891-3a73-4dc9-91d1-d97049e7ce94",
+			"rawModeData": "{\n\t\"parentId\":\"410000\",\n\t\"adcode\":\"410300\",\n\t\"name\":\"洛阳市\",\n\t\"areaLevel\":\"city\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "fb14f128-a83c-441a-9766-fd9535efe7a1",
+			"name": "新增(保存)",
+			"url": "http://localhost:8080/userInfo/save",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "84c3194a-560b-48c5-af67-23d97d42ef95",
+			"rawModeData": "{\n\t\"userName\":\"邹强\",\n\t\"loginName\":\"zouq\",\n\t\"loginPassword\":\"888888\",\n\t\"phone\":\"123XXXOOOXX\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}

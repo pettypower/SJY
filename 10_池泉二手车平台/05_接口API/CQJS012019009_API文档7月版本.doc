@@ -1,0 +1,1028 @@
+
+        <html xmlns:v="urn:schemas-microsoft-com:vml"
+        xmlns:o="urn:schemas-microsoft-com:office:office"
+        xmlns:w="urn:schemas-microsoft-com:office:word"
+        xmlns="http://www.w3.org/TR/REC-html40">
+        <head><meta http-equiv=Content-Type content="text/html;  
+        charset=utf-8">
+		<style type="text/css">
+			table  
+			{  
+				border-collapse: collapse;
+				border: none;  
+				width: 100%;  
+			}  
+			td  
+			{  
+				border: solid #CCC 1px;  
+			}  
+			.codestyle{
+				word-break: break-all;
+				background:silver;mso-highlight:silver;
+			}
+		</style>
+        <meta name=ProgId content=Word.Document>
+        <meta name=Generator content="Microsoft Word 11">
+        <meta name=Originator content="Microsoft Word 11">
+        <xml><w:WordDocument><w:View>Print</w:View></xml></head>
+        <body><h1>1、登录(退出)</h1><div style="margin-left:20px;"><h2>1.1、登录</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>登录</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li>url/api/login</li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">loginName</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录名</td>
+</tr>
+<tr>
+<td style="text-align: left;">loginPassword</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录密码</td>
+</tr>
+<tr>
+<td style="text-align: left;">loginType</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录方式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;,
+    &quot;retData&quot;: {
+        &quot;token&quot; : &quot;token信息&quot;,
+        &quot;userId&quot; : &quot;用户ID&quot;,
+        &quot;userName&quot; : &quot;用户姓名&quot;
+    }
+  }
+</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<ul>
+<li>
+<p>无</p>
+<p><strong>备注</strong></p>
+</li>
+</ul>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">loginName</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录名</td>
+</tr>
+<tr>
+<td style="text-align: left;">loginCode</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录密码</td>
+</tr>
+<tr>
+<td style="text-align: left;">loginType</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录方式 ：“loginName” 、“phoneNumber”</td>
+</tr>
+</tbody>
+</table></div><h2>1.2、注册</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>注册</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">loginName</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录名</td>
+</tr>
+<tr>
+<td style="text-align: left;">loginPassword</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录密码</td>
+</tr>
+<tr>
+<td style="text-align: left;">phone</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>联系方式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;,
+    &quot;retData&quot;: {
+        &quot;userId&quot; : &quot;用户ID&quot;
+    }
+  }
+</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<ul>
+<li>
+<p>无</p>
+<p><strong>备注</strong></p>
+</li>
+</ul>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">loginName</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录名</td>
+</tr>
+<tr>
+<td style="text-align: left;">loginCode</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录密码</td>
+</tr>
+<tr>
+<td style="text-align: left;">phone</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>联系方式</td>
+</tr>
+</tbody>
+</table></div><h2>1.3、退出登录</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>退出登录</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>人员Id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;
+  }
+</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<ul>
+<li>
+<p>无</p>
+<p><strong>备注</strong></p>
+</li>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h1>2、基本信息管理</h1><div style="margin-left:20px;"><h2>2.1、人员管理</h2><div style="margin-left:20px;"><h3>2.1.1、信息查询（详情）</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>人员基本信息查询（详情）</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>人员Id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;,
+    &quot;retData&quot;: {
+        &quot;id&quot;: &quot;主键&quot;,
+        &quot;userName&quot;: &quot;用户名&quot;,
+        &quot;phone&quot;: &quot;联系电话&quot;
+    }
+}
+</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<p>无</p>
+<p><strong>备注</strong></p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>2.1.2、信息调整(保存)</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>人员信息调整(保存)</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">loginPasswordOld</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录密码(旧)</td>
+</tr>
+<tr>
+<td style="text-align: left;">loginPasswordNew</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录密码(新)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;,
+    &quot;retData&quot;: {
+        &quot;userId&quot;: &quot;人员Id&quot;,
+        &quot;userName&quot;: &quot;人员名称&quot;,
+        &quot;phone&quot;: &quot;联系电话&quot;
+        }
+  }
+</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<p>无</p>
+<p><strong>备注</strong></p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>2.1.3、删除</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>人员删除</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>人员Id，多个以“，”隔开</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;
+}
+</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<p>无</p>
+<p><strong>备注</strong></p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>2.1.4、新增(保存)</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>人员新增(保存)</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userName</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">loginName</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">loginPassword</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>登录密码</td>
+</tr>
+<tr>
+<td style="text-align: left;">phone</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>联系电话</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;,
+    &quot;retData&quot;: {
+        &quot;userId&quot;: &quot;人员Id&quot;,
+        &quot;userName&quot;: &quot;人员名称&quot;,
+        &quot;phone&quot;: &quot;联系电话&quot;
+        }
+  }
+</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<p>无</p>
+<p><strong>备注</strong></p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h2>2.2、数据字典管理</h2><div style="margin-left:20px;"><h3>2.2.1、删除</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>数据字典删除</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>人员Id</td>
+</tr>
+<tr>
+<td style="text-align: left;">dictId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>字典Id，多个的场合以“，”隔开</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;
+}
+</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<p>无</p>
+<p><strong>备注</strong></p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>2.2.2、新增/修改(保存)</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>数据字典新增/修改(保存)</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">userId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>人员Id</td>
+</tr>
+<tr>
+<td style="text-align: left;">dictId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>字典Id(新增传空)</td>
+</tr>
+<tr>
+<td style="text-align: left;">parentId</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>父字典Id(没有传空)</td>
+</tr>
+<tr>
+<td style="text-align: left;">dictName</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>字典名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">orderNumber</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>排序号</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;
+  }
+</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<p>无</p>
+<p><strong>备注</strong></p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h3>2.2.3、查询(树形)</h3><div style="margin-left:30px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>数据字典查询(树形)</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">dictId</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>数据字典Id：  (车型 :"vehicleType")</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;,
+    &quot;retData&quot;: {
+        &quot;data&quot;: [{
+            &quot;dictId&quot;: &quot;数据字典唯一键&quot;,
+            &quot;dictName&quot;: &quot;数据字典显示值&quot;,
+            &quot;children&quot;: [{
+                &quot;dictId&quot;: &quot;数据字典唯一键&quot;,
+                &quot;dictName&quot;: &quot;数据字典显示值&quot;,
+                &quot;children&quot;: []
+            },{
+            &quot;dictId&quot;: &quot;数据字典唯一键&quot;,
+            &quot;dictName&quot;: &quot;数据字典显示值&quot;,
+            &quot;children&quot;: [{
+                &quot;dictId&quot;: &quot;数据字典唯一键&quot;,
+                &quot;dictName&quot;: &quot;数据字典显示值&quot;,
+                &quot;children&quot;: []
+            }]
+        }]
+    }
+}</code></pre></table>
+<p><strong>参数说明</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">"vehicleType"</td>
+<td style="text-align: left;">String</td>
+<td>车型</td>
+</tr>
+<tr>
+<td style="text-align: left;">"vehicleSystem"</td>
+<td style="text-align: left;">String</td>
+<td>车系</td>
+</tr>
+<tr>
+<td style="text-align: left;">"region"</td>
+<td style="text-align: left;">String</td>
+<td>地域</td>
+</tr>
+<tr>
+<td style="text-align: left;">"priceInterval"</td>
+<td style="text-align: left;">String</td>
+<td>价格区间</td>
+</tr>
+<tr>
+<td style="text-align: left;">"publicationStatus"</td>
+<td style="text-align: left;">String</td>
+<td>发布状态：1、“onSale” ： 在售； 2、“sold” ： 已售； 3、“unpublished” ： 下架；</td>
+</tr>
+<tr>
+<td style="text-align: left;">"sortCondition"</td>
+<td style="text-align: left;">String</td>
+<td>排序条件：1、“newArrival” ： 最新上架； 2、“dataIntegrity” ： 资料完整度高优先； 3、“highPrice” ： 价格高优先； 4、“lowPrice” ： 价格低优先；</td>
+</tr>
+<tr>
+<td style="text-align: left;">更多待更新</td>
+<td style="text-align: left;">String</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong></p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div></div><h1>3、车源管理</h1><div style="margin-left:20px;"><h2>3.1、卖车(插入)</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>卖车(插入)</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">createUser</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户Id</td>
+</tr>
+<tr>
+<td style="text-align: left;">vehicleType</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>车型</td>
+</tr>
+<tr>
+<td style="text-align: left;">mileage</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>里程数</td>
+</tr>
+<tr>
+<td style="text-align: left;">engineBrand</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>发动机品牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">fuelType</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>燃油类型</td>
+</tr>
+<tr>
+<td style="text-align: left;">emissionStandard</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>排放标准</td>
+</tr>
+<tr>
+<td style="text-align: left;">model</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>型号</td>
+</tr>
+<tr>
+<td style="text-align: left;">colour</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>颜色</td>
+</tr>
+<tr>
+<td style="text-align: left;">horsePower</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>马力</td>
+</tr>
+<tr>
+<td style="text-align: left;">attachmentPic</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>图片id，多个的场合以“，”隔开</td>
+</tr>
+<tr>
+<td style="text-align: left;">drivingMode</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>驱动方式</td>
+</tr>
+<tr>
+<td style="text-align: left;">price</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>车辆报价</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>发布状态</td>
+</tr>
+<tr>
+<td style="text-align: left;">carWatchingPlace</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>看车地点</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;,
+    &quot;retData&quot;: {
+        &quot;id&quot;: &quot;主键&quot;
+    }
+}
+</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<p>无</p>
+<p><strong>备注</strong></p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>3.2、车源列表查询(列表)</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>车源列表查询(列表)</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">pageSize</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>每页数据条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">pageNo</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>当前页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">vehicleType</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>车型</td>
+</tr>
+<tr>
+<td style="text-align: left;">vehicleSystem</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>车系</td>
+</tr>
+<tr>
+<td style="text-align: left;">region</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>地域</td>
+</tr>
+<tr>
+<td style="text-align: left;">priceInterval</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>价格</td>
+</tr>
+<tr>
+<td style="text-align: left;">publicationStatus</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>发布状态</td>
+</tr>
+<tr>
+<td style="text-align: left;">sortCondition</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>排序条件</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;
+    &quot;retData&quot;: {
+      &quot;total&quot;: 40,
+      &quot;data&quot;: {
+                [
+                    {
+                      &quot;truckId&quot;:&quot;车源ID&quot;,
+                      &quot;mainTitle&quot;: &quot;主标题&quot;,
+                      &quot;subTitle&quot;: &quot;副标题&quot;,
+                      &quot;sellingPrice&quot;: &quot;标价&quot;,
+                      &quot;publicationStatus&quot;: &quot;发布状态&quot;,
+                      &quot;pic&quot;: &quot;展示图片路径&quot;
+                    },
+                    {
+                      &quot;truckId&quot;:&quot;车源ID&quot;,
+                      &quot;mainTitle&quot;: &quot;主标题&quot;,
+                      &quot;subTitle&quot;: &quot;副标题&quot;,
+                      &quot;sellingPrice&quot;: &quot;标价&quot;,
+                      &quot;publicationStatus&quot;: &quot;发布状态&quot;,
+                      &quot;pic&quot;: &quot;展示图片路径&quot;
+                    },
+               ]
+      }
+    }
+  }</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<ul>
+<li>
+<p>无</p>
+<p><strong>备注</strong></p>
+</li>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>3.3、车源详情查询</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>查询车源详情</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>GET</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>车源ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;,
+    &quot;retData&quot;: {
+        &quot;id&quot;: &quot;主键&quot;,
+        &quot;vehicleType&quot;: &quot;车型&quot;,
+        &quot;mileage&quot;: &quot;里程数&quot;,
+        &quot;engineBrand&quot;: &quot;发动机品牌&quot;,
+        &quot;fuelType&quot;: &quot;燃油类型&quot;,
+        &quot;emissionStandard&quot;: &quot;排放标准&quot;,
+        &quot;vehicleSystem&quot;: &quot;车辆品牌（车系）&quot;,
+        &quot;model&quot;: &quot;型号&quot;,
+        &quot;colour&quot;: &quot;颜色&quot;,
+        &quot;horsePower&quot;: &quot;马力&quot;,
+        &quot;drivingMode&quot;: &quot;驱动方式&quot;,
+        &quot;contactNumber&quot;: &quot;联系电话&quot;,
+        &quot;attachmentPic&quot;: [{
+                &quot;picId&quot;: &quot;图片(Id)&quot;,
+                &quot;picPath&quot;: &quot;图片(路径)&quot;
+            },
+            {
+                &quot;picId&quot;: &quot;图片(Id)&quot;,
+                &quot;picPath&quot;: &quot;图片(路径)&quot;
+            }
+        ]
+    }
+}
+</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<p>无</p>
+<p><strong>备注</strong></p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h1>4、共通模块</h1><div style="margin-left:20px;"><h2>4.1、图片展示</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>附件下载</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>文件ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<p><strong>备注</strong></p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.2、附件上传</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong></p>
+<ul>
+<li>附件上传</li>
+</ul>
+<p><strong>请求URL：</strong></p>
+<ul>
+<li><code>待提供</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST</li>
+</ul>
+<p><strong>参数：</strong></p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>  {
+    &quot;retCode&quot;: &quot;0000&quot;,
+    &quot;retMsg&quot;: &quot;&quot;,
+    &quot;retData&quot;: {
+      &quot;http://wwww.ptf/www.jpg&quot;
+    }
+  }</code></pre></table>
+<p><strong>返回参数说明</strong></p>
+<ul>
+<li>
+<p>无</p>
+<p><strong>备注</strong></p>
+</li>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div></body></html>
