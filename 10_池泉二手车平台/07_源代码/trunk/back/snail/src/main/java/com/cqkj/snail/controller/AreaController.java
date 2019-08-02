@@ -165,6 +165,9 @@ public class AreaController {
                 if (StringUtils.isNotEmpty(area.getAdcode())) {
                     predicate.add(criteriaBuilder.like(root.get("adcode"), "%" + area.getAdcode() + "%"));
                 }
+                if (StringUtils.isNotEmpty(area.getAreaLevel())) {
+                    predicate.add(criteriaBuilder.like(root.get("areaLevel"), "%" + area.getAreaLevel() + "%"));
+                }
                 Predicate[] pre = new Predicate[predicate.size()];
                 return query.where(predicate.toArray(pre)).getRestriction();
 			}
