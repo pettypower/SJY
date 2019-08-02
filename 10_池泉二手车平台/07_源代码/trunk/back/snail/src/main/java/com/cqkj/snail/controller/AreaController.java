@@ -10,8 +10,8 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 import com.cqkj.snail.common.domain.ResponseVO;
-import com.cqkj.snail.domain.TTruck;
-import com.cqkj.snail.service.TruckService;
+import com.cqkj.snail.domain.TArea;
+import com.cqkj.snail.service.AreaService;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.domain.Page;
@@ -26,11 +26,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/truckInfo")
-public class TruckController {
+@RequestMapping("/AreaInfo")
+public class AreaController {
 
     @Resource
-    TruckService truckService;
+    AreaService areaService;
 
     private static final String MESSAGE = "执行成功";
 
@@ -39,12 +39,29 @@ public class TruckController {
      * @return 字典信息列表
      */
     @RequestMapping("/list")
-    public ResponseVO listTruck() {
+    public ResponseVO listArea() {
         ResponseVO response = new ResponseVO();
-        List<TTruck> truckInfoList = truckService.findAll();
+        List<TArea> areaInfoList = areaService.findAll();
         response.status(true);
         response.message(MESSAGE);
-        response.data(truckInfoList);
+        response.data(areaInfoList);
+        return response;
+    }
+
+    /**
+     * 字典查询.
+     * @return 字典信息列表
+     */
+    @RequestMapping("/listByAdcode")
+    public ResponseVO listByAdcode(@RequestBody TArea area) {
+        ResponseVO response = new ResponseVO();
+        // List<TArea> areaInfoList = areaService.findAllByAdcode(area);
+        List<TArea> areaInfoList = areaService.findAllByAdcode(area);
+        
+
+        response.status(true);
+        response.message(MESSAGE);
+        response.data(areaInfoList);
         return response;
     }
 
@@ -53,22 +70,22 @@ public class TruckController {
      * @return 字典信息列表
      */
     @PostMapping("/page")
-    public ResponseVO pageTruck(@RequestBody TTruck truck) {
+    public ResponseVO pageArea(@RequestBody TArea area) {
         ResponseVO response = new ResponseVO();
         int pageNo = 1;
         int pageSize = 20;
-        if (truck.getPageNo() != null) {
-            pageNo = truck.getPageNo();
+        if (area.getPageNo() != null) {
+            pageNo = area.getPageNo();
         }
-        if (truck.getPageSize() != null) {
-            pageSize = truck.getPageSize();
+        if (area.getPageSize() != null) {
+            pageSize = area.getPageSize();
         }
-        Specification<TTruck> specification = buildQueryParam(truck);
+        Specification<TArea> specification = buildQueryParam(area);
         Pageable pageable = PageRequest.of(pageNo -1, pageSize, Sort.Direction.ASC, "id");
-        Page<TTruck> pageTruck = truckService.findAll(specification, pageable);
+        Page<TArea> pageArea = areaService.findAll(specification, pageable);
         response.status(true);
         response.message(MESSAGE);
-        response.data(pageTruck);
+        response.data(pageArea);
         return response;
     }
 
@@ -77,12 +94,12 @@ public class TruckController {
      * @return
      */
     @PostMapping("/view")
-    public ResponseVO viewTruck(@RequestBody TTruck truck) {
+    public ResponseVO viewArea(@RequestBody TArea area) {
         ResponseVO response = new ResponseVO();
-        TTruck truckInfo = truckService.findById(truck);
+        TArea areaInfo = areaService.findById(area);
         response.status(true);
         response.message(MESSAGE);
-        response.data(truckInfo);
+        response.data(areaInfo);
         return response;
     }
 
@@ -91,9 +108,9 @@ public class TruckController {
      * @return
      */
     @PostMapping("/save")
-    public ResponseVO saveTruck(@RequestBody TTruck truck) {
+    public ResponseVO saveArea(@RequestBody TArea area) {
         ResponseVO response = new ResponseVO();
-        truckService.saveTruck(truck);
+        areaService.saveArea(area);
         response.status(true);
         response.message(MESSAGE);
         response.data("");
@@ -105,9 +122,9 @@ public class TruckController {
      * @return
      */
     @PostMapping("/edit")
-    public ResponseVO editTruck(@RequestBody TTruck truck) {
+    public ResponseVO editArea(@RequestBody TArea area) {
         ResponseVO response = new ResponseVO();
-        truckService.editTruck(truck);
+        areaService.ediTArea(area);
         response.status(true);
         response.message(MESSAGE);
         response.data("");
@@ -119,9 +136,9 @@ public class TruckController {
      * @return
      */
     @PostMapping("/delete")
-    public ResponseVO deleteTruck(@RequestBody TTruck truck) {
+    public ResponseVO deleteArea(@RequestBody TArea area) {
         ResponseVO response = new ResponseVO();
-        truckService.deleteTruck(truck);
+        areaService.deleteArea(area);
         response.status(true);
         response.message(MESSAGE);
         response.data("");
@@ -130,20 +147,17 @@ public class TruckController {
 
     /**
      * 查询条件*/
-    private Specification<TTruck> buildQueryParam(TTruck truck) {
-        return new Specification<TTruck>() {
+    private Specification<TArea> buildQueryParam(TArea area) {
+        return new Specification<TArea>() {
             // serialVersionUID
 			private static final long serialVersionUID = 1L;
 
             // 重写查询方法
 			@Override
-			public Predicate toPredicate(Root<TTruck> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
+			public Predicate toPredicate(Root<TArea> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
                 List<Predicate> predicate = new ArrayList<>();
-                if (StringUtils.isNotEmpty(truck.getVehicleBrand())) {
-                    predicate.add(criteriaBuilder.like(root.get("vehicleBrand"), "%" + truck.getVehicleBrand() + "%"));
-                }
-                if (StringUtils.isNotEmpty(truck.getVehicleSystem())) {
-                    predicate.add(criteriaBuilder.like(root.get("vehicleSystem"), "%" + truck.getVehicleSystem() + "%"));
+                if (StringUtils.isNotEmpty(area.getAdcode())) {
+                    predicate.add(criteriaBuilder.like(root.get("adcode"), "%" + area.getAdcode() + "%"));
                 }
                 Predicate[] pre = new Predicate[predicate.size()];
                 return query.where(predicate.toArray(pre)).getRestriction();
