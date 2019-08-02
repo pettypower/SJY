@@ -9,9 +9,12 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.cqkj.snail.common.domain.ResponseVO;
 import com.cqkj.snail.domain.TArea;
 import com.cqkj.snail.service.AreaService;
+import com.fasterxml.jackson.annotation.JsonCreator;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.domain.Page;
@@ -24,7 +27,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequestMapping("/AreaInfo")
 public class AreaController {
@@ -36,6 +38,7 @@ public class AreaController {
 
     /**
      * 字典查询.
+     * 
      * @return 字典信息列表
      */
     @RequestMapping("/list")
@@ -50,18 +53,21 @@ public class AreaController {
 
     /**
      * 字典查询.
+     * 
      * @return 字典信息列表
      */
     @RequestMapping("/listByAdcode")
     public ResponseVO listByAdcode(@RequestBody TArea area) {
         ResponseVO response = new ResponseVO();
-        // List<TArea> areaInfoList = areaService.findAllByAdcode(area);
         List<TArea> areaInfoList = areaService.findAllByAdcode(area);
-        
+
+        JSONArray returnJay = (JSONArray) JSONArray.toJSON(areaInfoList);
+        System.out.println("returnJay :" + returnJay);
 
         response.status(true);
         response.message(MESSAGE);
-        response.data(areaInfoList);
+        response.data(JSONArray.parseArray(returnJay.toString()));
+        // response.data(areaInfoList);
         return response;
     }
 
