@@ -6,7 +6,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -112,9 +114,11 @@ public class AttachController {
             attach.setSaveName(saveName);
             attach.setSavePath(attachProperty.getAttachUrl() + saveName);
             TAttach attachResult = attachService.saveAttach(attach);
+            Map<String, String> map = new HashMap<String, String>();
+            map.put("attachId", attachResult.getId());
             response.status(true);
             response.message(MESSAGE);
-            response.data(attachResult.getId());
+            response.data(map);
             return response;
         } catch (IOException e) {
             e.printStackTrace();
@@ -176,9 +180,11 @@ public class AttachController {
                 TAttach attachResult = attachService.saveAttach(attach);
                 attachId.append(attachResult.getId()).append(",");
             }
+            Map<String, String> map = new HashMap<String, String>();
+            map.put("attachId", attachId.substring(0, attachId.lastIndexOf(",")));
             response.status(true);
             response.message(MESSAGE);
-            response.data(attachId.substring(0, attachId.lastIndexOf(",")));
+            response.data(map);
             return response;
         } catch (IOException e) {
             e.printStackTrace();
