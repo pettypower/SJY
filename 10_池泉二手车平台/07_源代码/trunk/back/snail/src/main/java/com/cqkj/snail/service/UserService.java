@@ -9,7 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 
 public interface UserService {
-    TUser findByUserName(String loginName);
+    TUser findByLoginName(String loginName);
 
     List<TUser> findAll();
     

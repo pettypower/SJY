@@ -4,6 +4,7 @@ import java.util.Objects;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import com.cqkj.snail.common.domain.ResponseVO;
 import com.cqkj.snail.domain.TUser;
@@ -28,13 +29,13 @@ public class LoginController {
      * @throws Exception 
      */
     @PostMapping("/login")
-    public ResponseVO Login(@RequestBody TUser user, HttpServletRequest request) throws Exception {
+    public ResponseVO Login(@Valid@RequestBody TUser user, HttpServletRequest request) throws Exception {
         ResponseVO response = new ResponseVO();
         response.status(true);
         final String errorMessage = "用户名或密码错误";
         String loginName = user.getLoginName();
         String loginPassword = user.getLoginPassword();
-        TUser userInfo = userService.findByUserName(loginName);
+        TUser userInfo = userService.findByLoginName(loginName);
         if (userInfo == null) {
             response.status(false);
             response.message(errorMessage);

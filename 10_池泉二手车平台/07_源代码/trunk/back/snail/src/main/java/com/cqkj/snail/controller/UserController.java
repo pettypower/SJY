@@ -1,5 +1,6 @@
 package com.cqkj.snail.controller;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import javax.validation.Valid;
 
 import com.cqkj.snail.common.domain.ResponseVO;
 import com.cqkj.snail.domain.TUser;
@@ -91,8 +93,19 @@ public class UserController {
      * @return
      */
     @PostMapping("/save")
-    public ResponseVO saveUser(@RequestBody TUser user) {
+    public ResponseVO saveUser(@Valid@RequestBody TUser user) {
         ResponseVO response = new ResponseVO();
+        // 判断用户是否已存在，已存在则返回错误信息
+        TUser userInfo = userService.findByLoginName(user.getLoginName());
+        if (userInfo != null && StringUtils.isNotEmpty(userInfo.getLoginName())) {
+            response.status(false);
+            response.message("用户名已存在");
+            response.data("");
+            return response;
+        }
+        LocalDateTime now = LocalDateTime.now();
+        user.setCreateTime(now);
+        user.setUpdateTime(now);
         userService.saveUser(user);
         response.status(true);
         response.message(MESSAGE);
@@ -107,6 +120,8 @@ public class UserController {
     @PostMapping("/edit")
     public ResponseVO editUser(@RequestBody TUser user) {
         ResponseVO response = new ResponseVO();
+        LocalDateTime now = LocalDateTime.now();
+        user.setUpdateTime(now);
         userService.editUser(user);
         response.status(true);
         response.message(MESSAGE);

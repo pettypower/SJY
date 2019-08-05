@@ -1,5 +1,6 @@
 package com.cqkj.snail.controller;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,8 +37,8 @@ public class TruckController {
     private static final String MESSAGE = "执行成功";
 
     /**
-     * 字典查询.
-     * @return 字典信息列表
+     * 车辆查询.
+     * @return 车辆信息列表
      */
     @RequestMapping("/list")
     public ResponseVO listTruck() {
@@ -50,8 +51,8 @@ public class TruckController {
     }
 
     /**
-     * 字典分页查询.
-     * @return 字典信息列表
+     * 车辆分页查询.
+     * @return 车辆信息列表
      */
     @PostMapping("/page")
     public ResponseVO pageTruck(@RequestBody TTruck truck) {
@@ -81,7 +82,7 @@ public class TruckController {
     }
 
     /**
-     * 字典查看;
+     * 车辆查看;
      * @return
      */
     @PostMapping("/view")
@@ -95,12 +96,15 @@ public class TruckController {
     }
 
     /**
-     * 字典添加;
+     * 车辆添加;
      * @return
      */
     @PostMapping("/save")
     public ResponseVO saveTruck(@RequestBody TTruck truck) {
         ResponseVO response = new ResponseVO();
+        LocalDateTime now = LocalDateTime.now();
+        truck.setCreateTime(now);
+        truck.setUpdateTime(now);
         truckService.saveTruck(truck);
         response.status(true);
         response.message(MESSAGE);
@@ -109,12 +113,14 @@ public class TruckController {
     }
 
     /**
-     * 字典编辑;
+     * 车辆编辑;
      * @return
      */
     @PostMapping("/edit")
     public ResponseVO editTruck(@RequestBody TTruck truck) {
         ResponseVO response = new ResponseVO();
+        LocalDateTime now = LocalDateTime.now();
+        truck.setUpdateTime(now);
         truckService.editTruck(truck);
         response.status(true);
         response.message(MESSAGE);
@@ -123,7 +129,7 @@ public class TruckController {
     }
 
     /**
-     * 字典删除;
+     * 车辆删除;
      * @return
      */
     @PostMapping("/delete")

@@ -2,6 +2,7 @@ package com.cqkj.snail.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import com.cqkj.snail.common.base.BaseEntity;
 
@@ -22,8 +23,10 @@ public class TUser extends BaseEntity {
     // 用户姓名
     private String userName;
     // 登陆名
+    @NotBlank(message="用户名不能为空。")
     private String loginName;
     // 登陆密码
+    @NotBlank(message="密码不能为空。")
     private String loginPassword;
     // 联系电话
     private String phone;

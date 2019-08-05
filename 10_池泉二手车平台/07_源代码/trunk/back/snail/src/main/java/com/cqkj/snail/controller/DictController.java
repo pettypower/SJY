@@ -1,5 +1,6 @@
 package com.cqkj.snail.controller;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -108,6 +109,9 @@ public class DictController {
     @PostMapping("/save")
     public ResponseVO saveDict(@RequestBody TDict dict) {
         ResponseVO response = new ResponseVO();
+        LocalDateTime now = LocalDateTime.now();
+        dict.setCreateTime(now);
+        dict.setUpdateTime(now);
         dictService.saveDict(dict);
         response.status(true);
         response.message(MESSAGE);
@@ -122,6 +126,8 @@ public class DictController {
     @PostMapping("/edit")
     public ResponseVO editDict(@RequestBody TDict dict) {
         ResponseVO response = new ResponseVO();
+        LocalDateTime now = LocalDateTime.now();
+        dict.setUpdateTime(now);
         dictService.editDict(dict);
         response.status(true);
         response.message(MESSAGE);
