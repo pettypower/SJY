@@ -267,11 +267,11 @@ public class AttachController {
     private Specification<TAttach> buildQueryParam(TAttach attach) {
         return new Specification<TAttach>() {
             // serialVersionUID
-			private static final long serialVersionUID = 1L;
+            private static final long serialVersionUID = 1L;
 
             // 重写查询方法
-			@Override
-			public Predicate toPredicate(Root<TAttach> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
+            @Override
+            public Predicate toPredicate(Root<TAttach> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
                 List<Predicate> predicate = new ArrayList<>();
                 if (StringUtils.isNotEmpty(attach.getRealName())) {
                     predicate.add(criteriaBuilder.like(root.get("realName"), "%" + attach.getRealName() + "%"));
@@ -281,7 +281,7 @@ public class AttachController {
                 }
                 Predicate[] pre = new Predicate[predicate.size()];
                 return query.where(predicate.toArray(pre)).getRestriction();
-			}
+            }
 
         };
     }
