@@ -9,6 +9,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import com.alibaba.fastjson.JSONObject;
 import com.cqkj.snail.common.domain.ResponseVO;
 import com.cqkj.snail.domain.TTruck;
 import com.cqkj.snail.service.TruckService;
@@ -66,9 +67,16 @@ public class TruckController {
         Specification<TTruck> specification = buildQueryParam(truck);
         Pageable pageable = PageRequest.of(pageNo -1, pageSize, Sort.Direction.ASC, "id");
         Page<TTruck> pageTruck = truckService.findAll(specification, pageable);
+
+
+        JSONObject returnObj = new JSONObject();
+        returnObj.put("total", pageTruck.getTotalElements());
+        returnObj.put("content", pageTruck.getContent());
+
+
         response.status(true);
         response.message(MESSAGE);
-        response.data(pageTruck);
+        response.data(returnObj);
         return response;
     }
 

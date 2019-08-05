@@ -10,6 +10,7 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.cqkj.snail.common.domain.ResponseVO;
 import com.cqkj.snail.domain.TArea;
 import com.cqkj.snail.service.AreaService;
@@ -64,8 +65,8 @@ public class AreaController {
 
         response.status(true);
         response.message(MESSAGE);
-        response.data(JSONArray.parseArray(returnJay.toString()));
-        // response.data(areaInfoList);
+        // response.data(JSONArray.parseArray(returnJay.toString()));
+        response.data(areaInfoList);
         return response;
     }
 
@@ -87,9 +88,14 @@ public class AreaController {
         Specification<TArea> specification = buildQueryParam(area);
         Pageable pageable = PageRequest.of(pageNo -1, pageSize, Sort.Direction.ASC, "id");
         Page<TArea> pageArea = areaService.findAll(specification, pageable);
+
+        JSONObject returnObj = new JSONObject();
+        returnObj.put("total", pageArea.getTotalElements());
+        returnObj.put("content", pageArea.getContent());
+
         response.status(true);
         response.message(MESSAGE);
-        response.data(pageArea);
+        response.data(returnObj);
         return response;
     }
 
