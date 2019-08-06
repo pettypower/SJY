@@ -9,6 +9,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import javax.validation.Valid;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cqkj.snail.common.domain.ResponseVO;
@@ -100,7 +101,7 @@ public class TruckController {
      * @return
      */
     @PostMapping("/save")
-    public ResponseVO saveTruck(@RequestBody TTruck truck) {
+    public ResponseVO saveTruck(@Valid @RequestBody TTruck truck) {
         ResponseVO response = new ResponseVO();
         LocalDateTime now = LocalDateTime.now();
         truck.setCreateTime(now);
@@ -117,7 +118,7 @@ public class TruckController {
      * @return
      */
     @PostMapping("/edit")
-    public ResponseVO editTruck(@RequestBody TTruck truck) {
+    public ResponseVO editTruck(@Valid @RequestBody TTruck truck) {
         ResponseVO response = new ResponseVO();
         LocalDateTime now = LocalDateTime.now();
         truck.setUpdateTime(now);

@@ -9,6 +9,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import javax.validation.Valid;
 
 import com.cqkj.snail.common.domain.ResponseVO;
 import com.cqkj.snail.domain.TDict;
@@ -107,7 +108,7 @@ public class DictController {
      * @return
      */
     @PostMapping("/save")
-    public ResponseVO saveDict(@RequestBody TDict dict) {
+    public ResponseVO saveDict(@Valid @RequestBody TDict dict) {
         ResponseVO response = new ResponseVO();
         LocalDateTime now = LocalDateTime.now();
         dict.setCreateTime(now);
@@ -124,7 +125,7 @@ public class DictController {
      * @return
      */
     @PostMapping("/edit")
-    public ResponseVO editDict(@RequestBody TDict dict) {
+    public ResponseVO editDict(@Valid @RequestBody TDict dict) {
         ResponseVO response = new ResponseVO();
         LocalDateTime now = LocalDateTime.now();
         dict.setUpdateTime(now);

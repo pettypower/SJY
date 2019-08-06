@@ -93,7 +93,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/save")
-    public ResponseVO saveUser(@Valid@RequestBody TUser user) {
+    public ResponseVO saveUser(@Valid @RequestBody TUser user) {
         ResponseVO response = new ResponseVO();
         // 判断用户是否已存在，已存在则返回错误信息
         TUser userInfo = userService.findByLoginName(user.getLoginName());
@@ -118,7 +118,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/edit")
-    public ResponseVO editUser(@RequestBody TUser user) {
+    public ResponseVO editUser(@Valid @RequestBody TUser user) {
         ResponseVO response = new ResponseVO();
         LocalDateTime now = LocalDateTime.now();
         user.setUpdateTime(now);

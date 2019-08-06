@@ -9,6 +9,7 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import com.cqkj.snail.common.base.BaseEntity;
 
@@ -36,9 +37,11 @@ public class TDict extends BaseEntity {
     private String parentId;
 
     // 字典名称
+    @NotBlank(message="字典名称不能为空。")
     private String dictName;
 
     // 字典编码
+    @NotBlank(message="字典编码不能为空。")
     private String dictCode;
 
     // 排序号
