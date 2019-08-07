@@ -35,6 +35,11 @@ public class AttachServiceImpl implements AttachService {
     }
 
     @Override
+    public TAttach findById(String attachId) {
+        return attachRepository.findById(attachId).get();
+    }
+
+    @Override
     public TAttach saveAttach(TAttach attach) {
         return attachRepository.save(attach);
     }

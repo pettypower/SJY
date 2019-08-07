@@ -16,6 +16,8 @@ public interface AttachService {
 
     TAttach findById(TAttach attach);
 
+    TAttach findById(String attachId);
+
     TAttach saveAttach(TAttach attach);
 
     void deleteAttach(TAttach attach);

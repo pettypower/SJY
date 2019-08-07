@@ -234,6 +234,26 @@ public class AttachController {
     }
 
     /**
+     * 根据附件ID查询附件信息;
+     * @return
+     */
+    @PostMapping("/getAttach")
+    public ResponseVO getAttachById(@RequestBody Map<String, String> paramMap) {
+        ResponseVO response = new ResponseVO();
+        String attachIds = paramMap.get("attachIds");
+        String[] attachArray = attachIds.split(",");
+        List<TAttach> attachList = new ArrayList<TAttach>();
+        for (String attachId : attachArray) {
+            TAttach attachInfo = attachService.findById(attachId);
+            attachList.add(attachInfo);
+        }
+        response.status(true);
+        response.message(MESSAGE);
+        response.data(attachList);
+        return response;
+    }
+
+    /**
      * 附件添加;
      * @return
      */
