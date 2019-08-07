@@ -8,9 +8,8 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import javax.validation.Valid;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.cqkj.snail.common.domain.ResponseVO;
 import com.cqkj.snail.domain.TArea;
 import com.cqkj.snail.service.AreaService;
@@ -59,13 +58,8 @@ public class AreaController {
     public ResponseVO listByAdcode(@RequestBody TArea area) {
         ResponseVO response = new ResponseVO();
         List<TArea> areaInfoList = areaService.findAllByAdcode(area);
-
-        JSONArray returnJay = (JSONArray) JSONArray.toJSON(areaInfoList);
-        System.out.println("returnJay :" + returnJay);
-
         response.status(true);
         response.message(MESSAGE);
-        // response.data(JSONArray.parseArray(returnJay.toString()));
         response.data(areaInfoList);
         return response;
     }
@@ -88,11 +82,6 @@ public class AreaController {
         Specification<TArea> specification = buildQueryParam(area);
         Pageable pageable = PageRequest.of(pageNo -1, pageSize, Sort.Direction.ASC, "id");
         Page<TArea> pageArea = areaService.findAll(specification, pageable);
-
-        JSONObject returnObj = new JSONObject();
-        returnObj.put("total", pageArea.getTotalElements());
-        returnObj.put("content", pageArea.getContent());
-
         response.status(true);
         response.message(MESSAGE);
         response.data(pageArea);
@@ -118,7 +107,7 @@ public class AreaController {
      * @return
      */
     @PostMapping("/save")
-    public ResponseVO saveArea(@RequestBody TArea area) {
+    public ResponseVO saveArea(@Valid @RequestBody TArea area) {
         ResponseVO response = new ResponseVO();
         areaService.saveArea(area);
         response.status(true);
@@ -132,7 +121,7 @@ public class AreaController {
      * @return
      */
     @PostMapping("/edit")
-    public ResponseVO editArea(@RequestBody TArea area) {
+    public ResponseVO editArea(@Valid @RequestBody TArea area) {
         ResponseVO response = new ResponseVO();
         areaService.ediTArea(area);
         response.status(true);

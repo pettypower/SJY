@@ -6,6 +6,8 @@ import javax.validation.constraints.NotBlank;
 
 import com.cqkj.snail.common.base.BaseEntity;
 
+import org.hibernate.validator.constraints.Length;
+
 @Entity
 @Table(name = TUser.T_USER)
 public class TUser extends BaseEntity {
@@ -24,11 +26,14 @@ public class TUser extends BaseEntity {
     private String userName;
     // 登陆名
     @NotBlank(message="用户名不能为空。")
+    @Length(max = 100,message = "用户名最多不能超过100个字")
     private String loginName;
     // 登陆密码
     @NotBlank(message="密码不能为空。")
+    @Length(max = 100,message = "密码最多不能超过100个字")
     private String loginPassword;
     // 联系电话
+    @Length(max = 20,message = "联系电话长度不可超过20")
     private String phone;
 
     /**

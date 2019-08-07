@@ -110,6 +110,14 @@ public class DictController {
     @PostMapping("/save")
     public ResponseVO saveDict(@Valid @RequestBody TDict dict) {
         ResponseVO response = new ResponseVO();
+        // 判断字典编码是否已存在，已存在则返回错误信息
+        TDict dictInfo = dictService.findByCode(dict.getDictCode());
+        if (dictInfo != null && StringUtils.isNotEmpty(dictInfo.getDictCode())) {
+            response.status(false);
+            response.message("字典编码已经存在。");
+            response.data("");
+            return response;
+        }
         LocalDateTime now = LocalDateTime.now();
         dict.setCreateTime(now);
         dict.setUpdateTime(now);
