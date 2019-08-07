@@ -5,6 +5,8 @@ import javax.persistence.Table;
 
 import com.cqkj.snail.common.base.BaseEntity;
 
+import org.hibernate.validator.constraints.Length;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -28,6 +30,7 @@ public class TTruck extends BaseEntity {
     private String vehicleType;
 
     // 里程数
+    @Length(max = 100,message = "里程数最多不能超过100个字")
     private String mileage;
 
     // 发动机品牌
@@ -49,6 +52,7 @@ public class TTruck extends BaseEntity {
     private String colour;
 
     // 马力
+    @Length(max = 100,message = "里程数最多不能超过100个字")
     private String horsePower;
 
     // 驱动方式
@@ -58,6 +62,7 @@ public class TTruck extends BaseEntity {
     private String attachmentPic;
 
     // 车辆报价
+    @Length(max = 100,message = "车辆报价最多不能超过100个字")
     private String price;
 
     // 发布状态
