@@ -11,7 +11,6 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.validation.Valid;
 
-import com.alibaba.fastjson.JSONObject;
 import com.cqkj.snail.common.domain.ResponseVO;
 import com.cqkj.snail.domain.TTruck;
 import com.cqkj.snail.service.TruckService;
