@@ -69,16 +69,8 @@ public class TruckController {
         Specification<TTruck> specification = buildQueryParam(truck);
         Pageable pageable = PageRequest.of(pageNo -1, pageSize, Sort.Direction.ASC, "id");
         Page<TTruck> pageTruck = truckService.findAll(specification, pageable);
-
-
-        JSONObject returnObj = new JSONObject();
-        returnObj.put("total", pageTruck.getTotalElements());
-        returnObj.put("content", pageTruck.getContent());
-
-
         response.status(true);
         response.message(MESSAGE);
-        // response.data(returnObj);
         response.data(pageTruck);
         return response;
     }
@@ -145,7 +137,9 @@ public class TruckController {
     }
 
     /**
-     * 查询条件*/
+     * 查询条件;
+     * @return
+     */
     private Specification<TTruck> buildQueryParam(TTruck truck) {
         return new Specification<TTruck>() {
             // serialVersionUID
