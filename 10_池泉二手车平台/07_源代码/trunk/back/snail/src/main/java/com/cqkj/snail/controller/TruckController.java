@@ -78,7 +78,8 @@ public class TruckController {
 
         response.status(true);
         response.message(MESSAGE);
-        response.data(returnObj);
+        // response.data(returnObj);
+        response.data(pageTruck);
         return response;
     }
 

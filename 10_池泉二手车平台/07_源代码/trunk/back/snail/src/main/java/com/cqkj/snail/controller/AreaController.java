@@ -95,7 +95,7 @@ public class AreaController {
 
         response.status(true);
         response.message(MESSAGE);
-        response.data(returnObj);
+        response.data(pageArea);
         return response;
     }
 
