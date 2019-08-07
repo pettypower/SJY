@@ -1,0 +1,256 @@
+<html>
+
+<head>
+    <style type="text/css">
+        body {
+            color: blue;
+            text-indent: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #A7C942;
+        }
+
+        p {
+            text-indent: 50px;
+            text-align: justify;
+            letter-spacing: 3px;
+            color: chocolate
+        }
+
+        p.date {
+            text-align: right;
+            letter-spacing: 0px;
+            word-spacing: 5px;
+        }
+
+        /* a{
+        text-decoration: none;
+    } */
+        div {
+            background-color: #A7C942;
+            text-shadow: 1px 1px #ff0000;
+        }
+
+        a:link {
+            background-color: #B2FF99;
+        }
+
+        /* unvisited link */
+        a:visited {
+            background-color: #FFFF85;
+        }
+
+        /* visited link */
+        a:hover {
+            background-color: #FF704D;
+        }
+
+        /* mouse over link */
+        a:active {
+            background-color: #FF704D;
+        }
+
+        a:active {
+            text-decoration: underline;
+        }
+
+        /* selected link */
+        ul.b {
+            list-style-type: square;
+            list-style-position: inside;
+        }
+
+        ul.a {
+            list-style-type: disc;
+            list-style-position: outside;
+        }
+
+        table {
+            /* table内文字颜色 */
+            color: #A7C942;
+            /* table边框折叠(显示为一条线) */
+            border-collapse: collapse;
+            /* table整体宽度 */
+            width: 100%;
+            /* 表格边缘属性简写: 宽度1px, 实心,黑色 */
+            border: 1px solid black;
+        }
+
+        th {
+            /* 标题栏的高度: ? */
+            height: 50%;
+            /* 标题栏背景色:绿色 */
+            background-color: green;
+            /* 标题边缘属性简写: 宽度1px, 实心,黑色 */
+            border: 1px solid black;
+        }
+
+        tr {
+            /* 行高 */
+            height: 100px;
+
+        }
+
+        td {
+            /* 单元格边缘属性简写: 宽度1px, 实心,黑色 */
+            border: 1px solid black;
+            /* 表格内容左右对齐方式 */
+            text-align: center;
+            /* 表格内容高度 */
+            height: 50px;
+            /* 垂直对齐方式 */
+            vertical-align: center;
+            /* 内边距 */
+            padding: 15px;
+        }
+        .ex{
+            width: 500px;
+
+        }
+        .ex p{
+            /* font-size: 20px; */
+            /* width: 220px; */
+            text-indent: 0%;
+            text-align: center;
+            vertical-align:40%;
+            padding: 10%;
+            border: 5px solid gray;
+            margin: 10px;
+            background-color: #FF704D;
+        }
+        .centerTest {
+            background-color: #FF704D;
+            width:auto;
+            
+        }
+        .centerTest p{
+            padding: 50px 0px;
+            text-align: center;
+        }
+        q:lang(java) {
+            quotes: "~" "~";
+            color:red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <!-- <a href="/html/">HTML</a> |
+        <a href="/css/">CSS</a> |
+        <a href="/js/">JavaScript</a> |
+        <a href="/jquery/">jQuery</a> -->
+
+        <ul id="menu">
+                <li><a href="http://www.chiquan-jx.com/" class="active"><span>首页</span></a></li>
+                <li><a href="http://www.chiquan-jx.com/about"><span>关于我们</span></a></li>
+                <li>
+                    <a href="http://www.chiquan-jx.com/news"><span>新闻动态</span></a>
+                    <ul style="display:none">
+                        <li><a href="http://www.chiquan-jx.com/news?categoryId=13"><span>公司新闻</span></a></li>
+                        <li><a href="http://www.chiquan-jx.com/news?categoryId=14"><span>行业新闻</span></a></li>
+                    </ul>
+                    <a class="expand" href="javascript:">+</a>
+                </li>
+                <li>
+                    <a href="http://www.chiquan-jx.com/business"><span>业务范围</span></a>
+                    <ul style="display:none">
+                        <li><a href="http://www.chiquan-jx.com/business?categoryId=15"><span>海外软件外包</span></a></li>
+                        <li><a href="http://www.chiquan-jx.com/business?categoryId=16"><span>国内软件外包</span></a></li>
+                        <li><a href="http://www.chiquan-jx.com/business?categoryId=17"><span>软件技术实训</span></a></li>
+                    </ul>
+                    <a class="expand" href="javascript:">+</a>
+                </li>
+                <li>
+                    <a href="http://www.chiquan-jx.com/product"><span>产品介绍</span></a>
+                    <ul style="display:none">
+                        <li><a href="http://www.chiquan-jx.com/product?id=27"><span>池泉医院信息管理系统</span></a></li>
+                        <li><a href="http://www.chiquan-jx.com/product?id=28"><span>池泉协同办公系统</span></a></li>
+                        <li><a href="http://www.chiquan-jx.com/product?id=29"><span>搜咖</span></a></li>
+                    </ul>
+                    <a class="expand" href="javascript:">+</a>
+                </li>
+                <li><a href="http://www.chiquan-jx.com/hr"><span>人力资源</span></a></li>
+                <li><a href="http://www.chiquan-jx.com/contact"><span>联系我们</span></a></li>
+                <li><a href="https://sx.chiquan-jx.com/" target="_blank"><span>实训基地</span></a></li>
+                <!--<li><a href="http://jp.chiquan-jx.com" target="_blank"><span>池泉ジャパン</span></a></li>-->
+            </ul>
+    </nav>
+    <div>
+        his text is styled with some of the text formatting properties. The heading uses the text-align, text-transform,
+        and color properties.
+        The paragraph is indented, aligned, and the space between characters is specified.
+    </div>
+    <h1>text formatting</h1>
+    <p class="date">Modified by Zouq 2019-7-31</p>
+    <p>This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform,
+        and color properties.
+        The paragraph is indented, aligned, and the space between characters is specified. The underline is removed from
+        the
+        <a target="_blank" href="tryit?filename=trycss_text">"Try it yourself"</a> link.</p>
+    <div>
+        his text is styled with some of the text formatting properties. The heading uses the text-align, text-transform,
+        and color properties.
+        The paragraph is indented, aligned, and the space between characters is specified.
+    </div>
+    <a href="http://www.baidu.com" target="_blank">这是一个链接</a>
+
+    <ul class="a">
+        <li>无序1a</li>
+        <li>无序2a</li>
+    </ul>
+    <ul class="b">
+        <li>无序1b</li>
+        <li>无序2b</li>
+    </ul>
+    <ol class="a">
+        <li>有序1a</li>
+        <li>有序2a</li>
+    </ol>
+    <ol class="b">
+        <li>有序1b</li>
+        <li>有序2b</li>
+    </ol>
+
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+            <td>$150</td>
+        </tr>
+        <tr>
+            <td>Joe</td>
+            <td>Swanson</td>
+            <td>$300</td>
+        </tr>
+        <tr>
+            <td>Cleveland</td>
+            <td>Brown</td>
+            <td>$250</td>
+        </tr>
+    </table>
+    <div class="ex">
+        <p id="new0805">hello zouq</p>
+    </div>
+    <div class="centerTest">
+        <p>zouqiang</p>
+    </div>
+
+    <q lang="java">A quote in a paragraph</q>
+</body>
+
+</html>
