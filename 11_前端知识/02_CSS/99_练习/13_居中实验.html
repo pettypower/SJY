@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>W3Cschoolæ•™ç¨‹(w3cschool.cn)</title>
+    <style>
+        .test1 {
+            margin: 0 auto;
+            background-color: darkgray;
+            text-align: center;
+            /* height: 100px; */
+            width: 100%;
+            line-height: 100px;
+            border-style: solid;
+            border-width: 2px;
+        }
+
+        .test2parent {
+            margin: 0 auto;
+            width: 500px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .test2child {
+            width: 400px;
+            height: 100px;
+            padding: 50px;
+            background-color: black;
+            background-clip: content-box;
+            /*  内容模型 */
+            color: aliceblue
+        }
+
+
+        #ex3_container {
+            margin: 0 auto;
+            width: 400px;
+            height: 200px;
+            background-color: yellow;
+            position: relative;
+        }
+
+        #ex3_content {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            background-color: gray;
+            color: white;
+            position: absolute;
+        }
+
+        .Absolute-Center {
+            width: 50%;
+            height: 50%;
+            overflow: auto;
+            margin: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: burlywood;
+        }
+
+        .Absolute-Center.is-Responsive {
+            width: 60%;
+            height: 60%;
+            min-width: 400px;
+            max-width: 500px;
+            padding: 40px;
+            overflow: auto;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: aqua;
+            color: blanchedalmond;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="test1">本div里面的文字的垂直&水平居中效果(使用line-height=div行高,text-align=center)</div>
+    <div class="test2parent">
+        <div class="test2child">原理: 子div里设置background-clip: content-box, padding=合适大小实现居中</div>
+    </div>
+    <div id="ex3_container">
+        <div id="ex3_content">父div(relative), 子div(absolute) top:50% left:50% transform:translate(-50% -50%)实现居中</div>
+    </div>
+
+
+
+
+    <div style="height: 200px;  background-color: aqua;position: relative;">
+
+        <div
+            style="height: 50%; width:50%; overflow: auto; position: absolute; top:0; left:0;right:0;bottom:0; margin: auto; background-color:brown; color: aliceblue;">
+            子div(position=absolute, top|left|right|bottom=0, margin=auto) 父div(position=relative)
+        </div>
+    </div>
+
+    <div
+        style="width: 15%; height:10% ; overflow:auto; margin:auto; position:fixed; top:0; left:0; bottom:0;right:0; z-index:999; background-color: aquamarine; text-align: center;">
+
+        浏览器置顶居中方法: div(position:fixed; width: 50%; height:20% ;margin:auto; top:0; left:0; bottom:0;right:0;
+        z-index:999; )
+    </div>
+
+    <div style="position: relative; height: 200px; background-color: blueviolet;">
+        <div
+            style="width: 50%; height:20% ; background-color: aqua;  min-width: 400px;max-width: 500px; padding: 40px;overflow: auto;margin: auto; position: absolute;top: 0; left: 0; bottom: 0; right: 0;">
+
+            响应式居中
+        </div>
+    </div>
+
+    <div style="background-color:brown; height: 200px; width: 700px;">
+        <div style="background-color:aqua; ">
+
+        </div>
+    </div>
+
+    <div >
+        <div style="display: inline-block">
+abc
+        </div >
+        <div style="display: inline-block">
+efg
+            </div >
+
+            <span>span</span>
+    </div>
+
+</body>
