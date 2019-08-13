@@ -72,7 +72,7 @@ public class AreaController {
     public ResponseVO pageArea(@RequestBody TArea area) {
         ResponseVO response = new ResponseVO();
         int pageNo = 1;
-        int pageSize = 20;
+        int pageSize = 9999;
         if (area.getPageNo() != null) {
             pageNo = area.getPageNo();
         }
