@@ -1,14 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view />
   </div>
 </template>
 
 <script>
+import CommonHeader from './components/commonHead'
+import CommonFooter from './components/commonFoot'
 export default {
-  name: "App"
-};
+  name: 'App',
+  components: {
+    CommonHeader,
+    CommonFooter
+  }
+}
 </script>
 
 <style>
@@ -16,8 +21,5 @@ export default {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
