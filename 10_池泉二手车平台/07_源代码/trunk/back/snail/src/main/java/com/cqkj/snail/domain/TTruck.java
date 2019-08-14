@@ -2,6 +2,7 @@ package com.cqkj.snail.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import com.cqkj.snail.common.base.BaseEntity;
 
@@ -67,4 +68,11 @@ public class TTruck extends BaseEntity {
 
     // 发布状态
     private String status;
+
+    // 看车地点
+    private String carWatchingPlace;
+
+    // 排序规则
+    @Transient
+    private String sortCondition;
 }

@@ -2,6 +2,7 @@ package com.cqkj.snail.service.impl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import com.cqkj.snail.service.TruckService;
+import com.cqkj.snail.utils.CommonUtils;
 
 import org.junit.Test;
 
@@ -21,7 +22,5 @@ public class TruckServiceImplTests{
 	public void addsTwoNumbers() {
 		assertEquals(2, truckService.addTwoNumber(1, 1), "1 + 1 should equal 2");
 	}
-
-	
 }
 
