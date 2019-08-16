@@ -13,7 +13,7 @@ public class TruckUtils {
 		// 参数为空的场合
 		if (StringUtils.isEmpty(price)) {
 			// 返回false
-			return false;
+			return true;
 		}
 		// 参数不包括“-”的场合
 		if (!price.contains("-")) {
@@ -47,5 +47,5 @@ public class TruckUtils {
 		}
 
 		return true;
-	}
+	}	
 }
